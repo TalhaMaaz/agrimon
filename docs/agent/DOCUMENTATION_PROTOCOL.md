@@ -26,6 +26,7 @@ A phase is not finished until all of these exist and are committed:
 5. Draft of the matching thesis section.
 6. Concept notes and walkthroughs for everything new.
 7. Passing tests and a clean `make` of figures and tables.
+8. A playbook entry in `docs/playbook/`: the standard practice this phase followed, its evidence, what we did, and whether it transfers to Pakistan (see the playbook README). Skip only if the phase taught nothing transferable, and say so in the phase report.
 
 ## 3. Document inventory
 
@@ -41,6 +42,7 @@ A phase is not finished until all of these exist and are committed:
 | `docs/experiments/` | `registry.md` (generated from the tracker) and one `<MODULE>-EXP-NNNN.md` per experiment: goal, config and hash, git commit, data version, seeds, metrics, plots, conclusion, requirement or design study served. |
 | `docs/research/` | `search_log.md`, `synthesis_matrix.md`, `papers/` (one note per paper), `dataset_catalogue.md`, `datasets/<id>.md`, `related_work.md`, `unverified_references.md`. |
 | `docs/data/` | `data_dictionary.md`, `licences.md`, `lineage.md` (counts retained and dropped at each step, with reasons). |
+| `docs/playbook/` | Standards that transfer to Pakistan (Stage 2) and to building the system properly: one note per lifecycle stage, written as phases finish. See PROJECT_CONTEXT section 1a. |
 | `docs/concepts/` | One explainer per key concept: definition, intuition via programming analogy, why used here, alternatives with pros and cons, pitfalls, references. |
 | `docs/learning/` | Curriculum, lessons, walkthroughs, quizzes, understanding ledger, user's notes. See TEACHING_PROTOCOL. |
 | Registers | `assumptions_register.md`, `risk_register.md`, `claims_register.md`, `threats_to_validity.md`, `glossary.md`. |

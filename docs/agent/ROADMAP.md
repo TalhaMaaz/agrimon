@@ -5,9 +5,11 @@ The user's instruction (Oct 2026): do not plan hard around weeks. The goal is to
 ## 1. Two stages
 
 ```
- STAGE 1: general prototype (now)            STAGE 2: Pakistan (after Stage 1)
+ STAGE 1: full application (now)             STAGE 2: Pakistan (end of the FYP)
  -------------------------------             ----------------------------------
- any open dataset in the world               Pakistan-specific data and needs:
+ country with good open data (search)        adapt existing Pakistani datasets;
+                                             build what is possible today.
+                                             Pakistan-specific data and needs:
  learn the whole stack                       labels (scarce), field boundaries,
  prove the architecture                      irrigated smallholder fields, wheat/
  modules A and B (C = short note)            rice/cotton/sugarcane calendars,
@@ -15,7 +17,7 @@ The user's instruction (Oct 2026): do not plan hard around weeks. The goal is to
                                              local partners, startup concerns
 ```
 
-Stage 1 exists to make Stage 2 cheaper and better. Anything learned in Stage 1 that does not transfer should be written down as such. Stage 2 will need different things (data collection, partnerships, possibly different models); its detailed plan is written at the end of Stage 1 from what was learned, not now.
+Both stages are inside the FYP; Stage 1 is the only current focus. Stage 1 exists to make Stage 2 cheaper and better, and to teach the standards of the work (see PROJECT_CONTEXT section 1a). Transferable standards are collected in `docs/playbook/` as each step finishes. Anything learned in Stage 1 that does not transfer should be written down as such. Stage 2 will need different things (data collection, partnerships, possibly different models); its detailed plan is written at the end of Stage 1 from what was learned, not now.
 
 ## 2. Stage 1 outcomes in order
 
@@ -28,7 +30,7 @@ Stage 1 exists to make Stage 2 cheaper and better. Anything learned in Stage 1 t
 | Demo | Tier 1 replay on old fields; Tier 2 present-day run if a pilot works | Milestone M5 |
 | C | Short yield feasibility note; a small prototype only if open data and time allow | Gate C0 |
 | Thesis | Word thesis, reproducibility check, defence pack | Final checkpoint |
-| Bridge | Pakistan Bridge Report: what Stage 2 needs, based on what was learned | Part of the thesis |
+| Bridge | Pakistan Bridge Report: what Stage 2 needs, based on what was learned and on `docs/playbook/` | Part of the thesis; opens Stage 2 (planned then, not now) |
 
 Steps can overlap and be reordered. Finishing early is a goal: when a step is done, move on; do not fill time. Optional work (second dataset, extra ablations) is done only if it buys understanding or a better defence.
 

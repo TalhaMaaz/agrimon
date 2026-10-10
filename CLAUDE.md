@@ -4,12 +4,15 @@ Always-on rules only. Long background is in `docs/agent/PROJECT_CONTEXT.md`; pro
 
 ## Project
 
-Solo final-year project (one repo; thesis plus viva covering everything). Stage 1 is a general prototype from open world data, to be finished early; Stage 2 (after) is a Pakistan-specific system with different needs. No rigid schedule: see `ROADMAP.md`. A prototype built from open data only: no ground truth of our own, no research questions. Requirements and design studies govern the work.
+Solo final-year project (one repo; thesis plus viva covering everything). Two stages, both inside the FYP:
+- **Stage 1 (now, the only focus):** build the full application on a country whose open data meets our needs (proper field polygons, crop labels, ideally sugarcane), chosen by a dataset search in Phase R. Proves the pipeline and teaches the standards of the work.
+- **Stage 2 (end of the FYP):** adapt the available Pakistani datasets and build the system that is possible for Pakistan today.
+Why (user, 2026-10-10): beyond grades, the FYP exists to equip Talha with the skills and standards to build this kind of system end to end, from data collection to a shipped product. So every phase also records researched best practice that transfers to Pakistan (`docs/playbook/`). No rigid schedule: see `ROADMAP.md`. A prototype built from open data only: no ground truth of our own, no research questions. Requirements and design studies govern the work.
 - Module A: crop classification of field parcels from Sentinel-2 time series, shown on a web map. First deliverable.
 - Module B: near-real-time crop health monitoring (uses A). IMPORTANT to the user; also drives the present-day demo.
 - Module C: yield prediction. NOT important; default is a short feasibility note (`MODULE_C_YIELD.md`).
 - Demo: Tier 1 replay on old fields (must), Tier 2 run on present-day fields (stretch). See `MODULE_A_CLASSIFICATION.md` section 0b.
-Long-term aim: a Pakistan agritech startup. Keep licences and platform terms in view.
+Long-term aim (context only, not FYP scope; don't plan for it): a Pakistan agritech startup selling this application to sugar mills. Keep licences and platform terms in view.
 
 ## User
 
