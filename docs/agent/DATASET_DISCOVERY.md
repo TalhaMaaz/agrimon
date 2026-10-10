@@ -13,7 +13,8 @@ Standing mandate: actively explore datasets that fit the project goals. Do not w
 
 **Module A (classification)**
 - Field polygons plus per-field crop labels, open licence, enough years, Sentinel-2 era (2017 onward gives usable global L2A coverage; verify per region).
-- Sugarcane as an explicit class. Current preference: Brazil. Long-term interest: Pakistan, so also track datasets from South Asia and similar irrigated smallholder systems. No ground truth of our own is required at this stage; open data only.
+- The Stage 1 country is chosen by this search, not fixed in advance. Priority order: (1) proper field polygons with reliable per-field labels, open licence; (2) sugarcane as an explicit class; (3) conditions closer to Pakistan (irrigated, smallholder, similar crops) as a tiebreaker. Current preference from kit research: Brazil (a hypothesis until the audit).
+- Stage 2 (Pakistan, end of the FYP): track Pakistani, South Asian and similar irrigated smallholder datasets in every round, even if unusable now, so Stage 2 starts from a known list. No ground truth of our own is required at this stage; open data only.
 - Additional crops common in the target region (wheat, rice, cotton, maize, and similar).
 
 **Module B (health monitoring)**

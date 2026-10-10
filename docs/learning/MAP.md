@@ -12,10 +12,10 @@ Related: [STATUS](../STATUS.md) | [Weekly rhythm](WEEKLY_RHYTHM.md) | [Obsidian 
 
 ## 1. Right now (agent updates at /session-end)
 
-- Current phase: Stage 1, about to start Phase R (issue #6)
-- This week's goal: merge the CI fix and setup PRs, then start Phase R: design questions, dataset search, first papers
-- Waiting for me: merge PR #18 (CI fix) first, then the vision/status PR, then #16 and #14; decide the code licence (MIT or Apache-2.0)
-- The one concept I must understand this week: how to read a research paper (before the first Phase R paper)
+- Current phase: (agent fills in)
+- This week's goal: (agent fills in)
+- Waiting for me: PRs to review, decisions to make (agent fills in)
+- The one concept I must understand this week: (agent fills in)
 
 ## 2. The whole system in one picture (a starting hypothesis; the validated version lives in `../architecture/architecture_dossier.md` after Phase R)
 

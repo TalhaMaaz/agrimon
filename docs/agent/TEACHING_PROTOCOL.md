@@ -20,6 +20,7 @@ Calibrate: connect new ideas to what the user already knows (programming, basic 
 7. **Say what you are unsure of** and how to verify it. Never bluff. Cite sources for concept claims; verified references only.
 8. **Do not teach in a way that slows the project unnecessarily.** Depth scales with importance: core concepts get deep treatment, routine plumbing gets a short note.
 9. **Language:** English, clear and precise.
+10. **Teach the standard, not only our choice.** The user is building skills for a real system later (PROJECT_CONTEXT section 1a). When a technique appears, say whether it is the established practice, who established it (paper, spec, tool), what a production system would do differently, and whether it would work for Pakistan.
 
 ## 3. Lesson formats
 

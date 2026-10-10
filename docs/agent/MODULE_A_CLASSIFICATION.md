@@ -1,6 +1,6 @@
 # MODULE A: CROP CLASSIFICATION
 
-Goal: classify the crop growing in each field (parcel) from Sentinel-2 time series, show parcels on a web map coloured by the crop predicted as of a chosen date. This is a prototype built entirely from open data, with the focus on software engineering and pipelines. There is no ground truth of our own and none is required. Pakistan-specific work comes after the pipeline exists and the user understands it.
+Goal: classify the crop growing in each field (parcel) from Sentinel-2 time series, show parcels on a web map coloured by the crop predicted as of a chosen date. This is a prototype built entirely from open data, with the focus on software engineering and pipelines. There is no ground truth of our own and none is required. Pakistan-specific work is Stage 2, at the end of the FYP, after the pipeline exists and the user understands it (PROJECT_CONTEXT section 1a). The Stage 1 dataset is chosen by the Phase R dataset search (design question DQ-01); the candidates below are the starting list.
 
 Each phase starts with a Phase Brief and a Primer (see TEACHING_PROTOCOL), and ends with the Phase Exit Rule (see DOCUMENTATION_PROTOCOL).
 
@@ -113,7 +113,7 @@ Static MapLibre GL JS site with PMTiles, open basemap without API key. Parcels c
 **Milestone M1** (see ROADMAP).
 
 ### A-Phase 9: Second dataset and the Pakistan bridge
-Dataset discovery round 2 (DATASET_DISCOVERY). Add the second dataset (Brazil-Crop if France was first, or EuroCrops France if Brazil was first) through the label-adapter interface and report what changes. Then write a Pakistan Bridge Report: what would be needed to run this pipeline on Pakistan (open labels, which are scarce; crop calendars for rabi wheat and kharif rice, cotton, sugarcane; field-boundary extraction because open polygons are scarce; radar for monsoon cloud; ground-truth collection), using verified Pakistan references from READING_LIST tier 3. Sugarcane is long-cycle with plant and ratoon crops, so the "planted today" idea needs rethinking: define the label with the user. Update threats to validity.
+Dataset discovery round 2 (DATASET_DISCOVERY). Add the second dataset (Brazil-Crop if France was first, or EuroCrops France if Brazil was first) through the label-adapter interface and report what changes. Then write a Pakistan Bridge Report: what would be needed to run this pipeline on Pakistan (open labels, which are scarce; crop calendars for rabi wheat and kharif rice, cotton, sugarcane; field-boundary extraction because open polygons are scarce; radar for monsoon cloud; ground-truth collection), using verified Pakistan references from READING_LIST tier 3 and the entries collected in `docs/playbook/`. This report is the starting plan for Stage 2. Sugarcane is long-cycle with plant and ratoon crops, so the "planted today" idea needs rethinking: define the label with the user. Update threats to validity.
 **Milestone M2.**
 
 ## 6. Anti-patterns (do not do these)
@@ -135,4 +135,4 @@ Why this first dataset when the long-term interest is Pakistan? What are the wea
 
 ## 8. Definition of done (stage 1)
 
-Audited, licensed, reproducible France pipeline from raw parquet to web map; honest evaluation with baselines, design studies and a calibrated deep model, every result tied to a registered experiment; in-season curve and `predict_as_of`; web app verified in a browser plus fallback demo; tests passing; clean-clone reproducibility check passing; disk under budget; documentation and thesis sections drafted; extension point for new label sources demonstrated by a second adapter or a documented stub.
+Audited, licensed, reproducible pipeline for the Stage 1 dataset chosen at DQ-01 (this line used to say "France"; MODULE_A section 0 prefers Brazil-Crop; the audit decides), from raw labels to web map; honest evaluation with baselines, design studies and a calibrated deep model, every result tied to a registered experiment; in-season curve and `predict_as_of`; web app verified in a browser plus fallback demo; tests passing; clean-clone reproducibility check passing; disk under budget; documentation and thesis sections drafted; extension point for new label sources demonstrated by a second adapter or a documented stub.

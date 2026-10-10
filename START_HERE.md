@@ -2,6 +2,8 @@
 
 This kit sets up Claude Code to build your FYP (classification, health monitoring, optional yield prediction) in one repository, with no rigid schedule, to teach you along the way, and to run the repository like a professional software team.
 
+Vision (added 2026-10-10): Stage 1 builds the full application on a country with good open data; Stage 2, at the end of the FYP, adapts Pakistani datasets. The aim is to learn the standards for building such a system end to end. See `docs/agent/PROJECT_CONTEXT.md` section 1a and `docs/playbook/`.
+
 ## What is in the kit
 
 ```
