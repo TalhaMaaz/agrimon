@@ -1,0 +1,25 @@
+name: Feature request
+description: Propose new behaviour
+title: "[feature] "
+labels: ["type:feature"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or need
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered, with pros and cons
+  - type: input
+    id: requirement
+    attributes:
+      label: Related requirement ID

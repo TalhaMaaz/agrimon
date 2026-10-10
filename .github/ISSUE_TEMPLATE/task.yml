@@ -1,0 +1,43 @@
+name: Task
+description: A unit of planned work tied to a requirement
+title: "[task] "
+labels: ["type:chore"]
+body:
+  - type: input
+    id: requirement
+    attributes:
+      label: Requirement ID
+      description: For example R-A-01. Write "none" and explain if there is no matching requirement.
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What should exist or change, in plain words.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: A checklist that can be verified by a test, a number or a screenshot.
+      placeholder: "- [ ] ..."
+    validations:
+      required: true
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module
+      options:
+        - A classification
+        - B health monitoring
+        - C yield
+        - platform
+        - infra
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes, risks, links

@@ -1,0 +1,44 @@
+name: Dataset candidate
+description: Propose a dataset for evaluation with the discovery rubric
+title: "[dataset] "
+labels: ["type:dataset"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Dataset name
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Landing page or DOI
+    validations:
+      required: true
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module
+      options:
+        - A classification
+        - B health monitoring
+        - C yield
+    validations:
+      required: true
+  - type: input
+    id: licence
+    attributes:
+      label: Licence (as written on the landing page)
+  - type: textarea
+    id: summary
+    attributes:
+      label: What it contains (region, years, geometry, classes, size)
+  - type: textarea
+    id: concerns
+    attributes:
+      label: Known concerns (provenance, circular labels, licence limits)
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification status
+      description: What has been verified, and what has not.

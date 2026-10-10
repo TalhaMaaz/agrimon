@@ -1,0 +1,34 @@
+name: Bug report
+description: Something behaves differently from what is documented or expected
+title: "[bug] "
+labels: ["type:bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Commands, config files, commit hash, data version.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or error output
+      render: shell
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      description: Machine (laptop, lab PC, cloud), OS, Python version, commit.

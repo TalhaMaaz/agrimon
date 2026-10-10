@@ -1,0 +1,41 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Data, rasters, model weights: never in git
+data/
+*.tif
+*.tiff
+*.jp2
+*.nc
+*.zarr
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.pkl
+*.pmtiles
+
+# Claude Code personal settings
+.claude/settings.local.json
+CLAUDE.local.md
+
+# Machine-specific config
+configs/local.yaml
+docs/machines/*.local.md
+
+# Obsidian device-specific state (shared settings are committed)
+docs/.obsidian/workspace*.json
+docs/.obsidian/cache
+docs/.obsidian/plugins/*/data.json
+
+# Build output
+docs/thesis/build/
+node_modules/
+apps/web/dist/

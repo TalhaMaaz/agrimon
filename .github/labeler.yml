@@ -1,0 +1,28 @@
+module:A:
+  - changed-files:
+      - any-glob-to-any-file:
+          - src/agrimon/classification/**
+          - configs/classification/**
+module:B:
+  - changed-files:
+      - any-glob-to-any-file:
+          - src/agrimon/health/**
+          - configs/health/**
+module:C:
+  - changed-files:
+      - any-glob-to-any-file:
+          - src/agrimon/yield_/**
+          - configs/yield/**
+module:infra:
+  - changed-files:
+      - any-glob-to-any-file:
+          - .github/**
+          - Makefile
+          - pyproject.toml
+          - .devcontainer/**
+type:docs:
+  - changed-files:
+      - any-glob-to-any-file:
+          - docs/**
+          - README.md
+          - "**/*.md"

@@ -1,0 +1,37 @@
+name: Experiment
+description: A planned experiment or design study
+title: "[exp] "
+labels: ["type:experiment"]
+body:
+  - type: input
+    id: id
+    attributes:
+      label: Experiment or design study ID
+      description: For example A-EXP-012 or DS-A-03.
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Engineering question
+      description: What design choice does this settle?
+    validations:
+      required: true
+  - type: textarea
+    id: setup
+    attributes:
+      label: Setup
+      description: Data version, split, model, config file, seeds, hardware.
+    validations:
+      required: true
+  - type: textarea
+    id: metrics
+    attributes:
+      label: Metrics and decision rule
+      description: Defined before running.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Result (fill after running)

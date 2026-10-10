@@ -1,0 +1,213 @@
+{
+  "nodes": [
+    {
+      "id": "g_data",
+      "type": "group",
+      "x": -40,
+      "y": -40,
+      "width": 560,
+      "height": 560,
+      "label": "Open data"
+    },
+    {
+      "id": "g_pipe",
+      "type": "group",
+      "x": 560,
+      "y": -40,
+      "width": 560,
+      "height": 560,
+      "label": "Pipeline"
+    },
+    {
+      "id": "g_mod",
+      "type": "group",
+      "x": 1160,
+      "y": -40,
+      "width": 560,
+      "height": 560,
+      "label": "Modules and product"
+    },
+    {
+      "id": "lab",
+      "x": 0,
+      "y": 20,
+      "width": 480,
+      "height": 120,
+      "type": "text",
+      "text": "**Field polygons + crop labels**\nBrazil-Crop (primary candidate), EuroCrops France (benchmark)",
+      "color": "4"
+    },
+    {
+      "id": "s2",
+      "x": 0,
+      "y": 180,
+      "width": 480,
+      "height": 120,
+      "type": "text",
+      "text": "**Sentinel-2 L2A images**\nStreamed from STAC (Planetary Computer)",
+      "color": "4"
+    },
+    {
+      "id": "s1",
+      "x": 0,
+      "y": 340,
+      "width": 480,
+      "height": 120,
+      "type": "text",
+      "text": "**Sentinel-1 radar, weather** (later, Module B)",
+      "color": "4"
+    },
+    {
+      "id": "adapter",
+      "x": 600,
+      "y": 20,
+      "width": 480,
+      "height": 120,
+      "type": "text",
+      "text": "**Label adapter**\nclean parcels, buffer, minimum area, spatial block splits",
+      "color": "5"
+    },
+    {
+      "id": "feat",
+      "x": 600,
+      "y": 180,
+      "width": 480,
+      "height": 120,
+      "type": "text",
+      "text": "**Imagery to features**\ncloud mask, harmonise, 10-day composites, per-parcel time series (parquet)",
+      "color": "5"
+    },
+    {
+      "id": "eval",
+      "x": 600,
+      "y": 340,
+      "width": 480,
+      "height": 120,
+      "type": "text",
+      "text": "**Evaluation discipline**\nspatial blocks, held-out region, macro-F1, seeds, bootstrap",
+      "color": "5"
+    },
+    {
+      "id": "A",
+      "x": 1200,
+      "y": 20,
+      "width": 480,
+      "height": 120,
+      "type": "text",
+      "text": "**Module A: classify**\nLightGBM baseline, TempCNN, attention, calibration, predict_as_of",
+      "color": "6"
+    },
+    {
+      "id": "B",
+      "x": 1200,
+      "y": 180,
+      "width": 480,
+      "height": 120,
+      "type": "text",
+      "text": "**Module B: health**\nexpected curve, anomaly score, radar, weather, near-real-time job",
+      "color": "6"
+    },
+    {
+      "id": "C",
+      "x": 1200,
+      "y": 340,
+      "width": 480,
+      "height": 120,
+      "type": "text",
+      "text": "**Module C: yield (gated)**\nregional prototype or feasibility study",
+      "color": "6"
+    },
+    {
+      "id": "web",
+      "x": 1200,
+      "y": 540,
+      "width": 480,
+      "height": 120,
+      "type": "text",
+      "text": "**Web map**\nGeoParquet to PMTiles, MapLibre, date slider, health layer",
+      "color": "2"
+    },
+    {
+      "id": "guide",
+      "x": 600,
+      "y": 540,
+      "width": 480,
+      "height": 120,
+      "type": "file",
+      "file": "learning/MAP.md",
+      "color": "3"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "fromNode": "lab",
+      "toNode": "adapter",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e2",
+      "fromNode": "s2",
+      "toNode": "feat",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e3",
+      "fromNode": "adapter",
+      "toNode": "feat",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e4",
+      "fromNode": "feat",
+      "toNode": "A",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e5",
+      "fromNode": "eval",
+      "toNode": "A",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e6",
+      "fromNode": "s1",
+      "toNode": "feat",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e7",
+      "fromNode": "A",
+      "toNode": "B",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e8",
+      "fromNode": "B",
+      "toNode": "C",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e9",
+      "fromNode": "A",
+      "toNode": "web",
+      "fromSide": "right",
+      "toSide": "right"
+    },
+    {
+      "id": "e10",
+      "fromNode": "B",
+      "toNode": "web",
+      "fromSide": "right",
+      "toSide": "right"
+    }
+  ]
+}
