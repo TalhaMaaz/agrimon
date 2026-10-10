@@ -4,7 +4,30 @@ This is the full background that used to live in CLAUDE.md. CLAUDE.md now holds 
 
 ## 1. What this project is
 
-A final-year project (FYP) built in this single repository, with no rigid schedule (finish Stage 1 early, then expand toward Pakistan), with a written thesis and an oral defence covering the WHOLE project. It has three modules:
+A final-year project (FYP) built in this single repository, with no rigid schedule (finish Stage 1 early, then expand toward Pakistan), with a written thesis and an oral defence covering the WHOLE project.
+
+### 1a. Origin, stages and motivation (user, 2026-10-10)
+
+The FYP was first meant to build the system for Pakistan. Pakistan lacks good open datasets (especially proper field polygons with crop labels), so the scope became:
+
+```
+ STAGE 1 (now, sole focus)                    STAGE 2 (end of the FYP)
+ full application on a country with           adapt the existing Pakistani datasets
+ good open data (found by dataset search) --> build the system that is possible
+ learn the pipeline and the standards         for Pakistan today
+```
+
+Why Talha is doing this, beyond grades: to equip himself with the skills and the professional standards needed to build this kind of system end to end (dataset collection, labelling, imagery, modelling, validation, MLOps, serving, shipping). Consequences for the agent:
+- Prefer the industry or research standard way of doing each thing, and say what that standard is and where it comes from (paper, spec, widely used tool).
+- Gather and note the research papers behind each decision. Notes must be good enough to plan a Pakistan system later without re-reading everything.
+- When a phase finishes, record what transfers to Pakistan, what doesn't and why, in `docs/playbook/`.
+- Sugarcane matters as a class, because sugarcane is the eventual customer's crop.
+
+After university, the user plans a startup selling this application to sugar mills in Pakistan. That is context for priorities (licences, sugarcane, transferability), **not FYP scope**. Don't plan or build for it.
+
+### 1b. Modules
+
+It has three modules:
 
 - **Module A. Crop classification.** Classify the crop in each field (parcel) from satellite time series and show the result on a web map. First deliverable.
 - **Module B. Near-real-time crop health monitoring** of the crops detected by Module A.

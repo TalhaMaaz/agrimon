@@ -1,6 +1,6 @@
 # READING LIST (curated, ranked, with honest verification status)
 
-Purpose: the papers and resources that explain how this project should be carried out, assuming the user later builds a startup for Pakistan. The user has read no papers yet, so this list is ordered as a path, not a pile.
+Purpose: the papers and resources that explain how this project should be carried out and what the standard practice is at each step, so that Stage 2 (Pakistan, end of the FYP) can be planned from evidence (see PROJECT_CONTEXT section 1a). Papers read get notes good enough to reuse without re-reading. The user has read no papers yet, so this list is ordered as a path, not a pile.
 
 ## 0. How to read this file
 
