@@ -7,15 +7,15 @@ tags: [handoff]
 # Handoff (overwritten at every /handoff; history is in Git)
 
 Last updated: 2026-10-10, Photon (laptop)
-Branch: `fix/21-hook-false-positives` (PR #22)
+Branch: `docs/6-close-session-2` (session-end PR); everything else is on `main`
 Last commit: see `git log -1` on that branch
 
 ## What I was doing and why
-Finishing setup before Phase R: CI fixed (#18), vision carried through the kit (#20), foundation guide (#16) and Phase R plan (#14) merged, hook false positives fixed (#22), glossary created, Dependabot PRs reviewed.
+Setup before Phase R, now complete: CI fixed (#18), vision carried through the kit (#20), foundation guide (#16) and Phase R plan (#14) merged, hook false positives fixed (#22), glossary created, Dependabot #1 to #5 merged.
 
 ## State of the work
-- Done: everything above; laptop synced with `main`.
-- In progress: PR #22 and Dependabot #1 to #5 waiting for the user to merge.
+- Done: everything above; Photon synced with `main` (only branch).
+- In progress: the session-end PR, waiting for the user to merge.
 - Not started: Phase R step 2 (literature and dataset search).
 
 ## Commands to resume (copy-paste)
@@ -34,6 +34,7 @@ claude   # then /session-start
 
 ## Gotchas learned (things a fresh session would trip over)
 - The shell is zsh: `set -- $var` doesn't split words. Use `bash -c '...'` for word-splitting loops.
-- Don't click *Update branch* on Dependabot PRs; comment `@dependabot rebase`.
+- Don't click *Update branch* on Dependabot PRs; comment `@dependabot rebase`. If the rebase is slow, resolve by hand only when the PR is merged straight after.
+- A squash-merged branch shows as "diverged" from `main`; compare content (`git diff <squash-commit> <branch>`) before deleting it.
 - `ruff format <dir>` formats every file in it; pass single files to keep diffs focused.
 - The Obsidian vault is `docs/`; Obsidian rewrites `MAP.canvas` and `.obsidian/*.json` in its own format. Those diffs are harmless.
