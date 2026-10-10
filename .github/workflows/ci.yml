@@ -21,7 +21,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-          cache: pip
+          # No `cache: pip` yet: it errors when there is no requirements.txt or
+          # pyproject.toml. Re-add it when #7 creates pyproject.toml.
       - name: Install
         if: hashFiles('pyproject.toml') != ''
         run: |
