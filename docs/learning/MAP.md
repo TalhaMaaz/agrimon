@@ -14,7 +14,7 @@ Related: [STATUS](../STATUS.md) | [Weekly rhythm](WEEKLY_RHYTHM.md) | [Obsidian 
 
 - Current phase: Stage 1, Phase R (research and architecture), step 1 done in draft (issue #6)
 - This week's goal: review design questions and hypothesis register; L01 Sentinel-2; first paper
-- Waiting for me: merge PR #18 (CI fix) first, then #20, #16, #14; L00 check questions; code licence choice
+- Waiting for me: merge PR #22 (hook fix) and Dependabot #4, #5, #3, #2, #1; review design questions and hypothesis register; L00 check questions; code licence choice
 - The one concept I must understand this week: how to read a paper ([L00](lessons/L00_how_to_read_a_paper.md))
 
 ## 2. The whole system in one picture (a starting hypothesis; the validated version lives in `../architecture/architecture_dossier.md` after Phase R)

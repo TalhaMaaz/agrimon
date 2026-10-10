@@ -40,6 +40,9 @@ jobs:
       - name: Contract tests
         if: hashFiles('pyproject.toml') != ''
         run: pytest tests/contracts -q
+      - name: Hook tests
+        # Standard library only, so it runs before pyproject.toml exists.
+        run: python .claude/hooks/test_guard_bash.py
       - name: Block large files
         run: |
           big=$(git ls-files -z | xargs -0 -I{} sh -c 'test -f "{}" && stat -c "%s {}" "{}"' | awk '$1 > 5000000 {print}')
