@@ -12,10 +12,10 @@ Related: [STATUS](../STATUS.md) | [Weekly rhythm](WEEKLY_RHYTHM.md) | [Obsidian 
 
 ## 1. Right now (agent updates at /session-end)
 
-- Current phase: (agent fills in)
-- This week's goal: (agent fills in)
-- Waiting for me: PRs to review, decisions to make (agent fills in)
-- The one concept I must understand this week: (agent fills in)
+- Current phase: Phase R (research and architecture), step 1 done in draft (issue #6)
+- This week's goal: review design questions and hypothesis register; L01 Sentinel-2; first paper
+- Waiting for me: draft PR for `docs/6-phase-r-plan`; L00 check questions; code licence choice
+- The one concept I must understand this week: how to read a paper ([L00](lessons/L00_how_to_read_a_paper.md))
 
 ## 2. The whole system in one picture (a starting hypothesis; the validated version lives in `../architecture/architecture_dossier.md` after Phase R)
 
@@ -84,7 +84,7 @@ Tick a box only when you could explain it to the examiner without notes (use `/t
 
 ## 4. Reading order (papers)
 
-See [Reading list](../agent/READING_LIST.md). Next unread item: (agent fills in). Keep five-line summaries in `my_understanding/papers/`.
+See [Reading list](../agent/READING_LIST.md). Next unread item: Drusch et al. 2012 (Sentinel-2). Keep five-line summaries in `my_understanding/papers/`.
 
 ## 5. Where things live
 

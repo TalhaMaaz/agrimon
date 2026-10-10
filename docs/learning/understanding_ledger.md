@@ -10,4 +10,4 @@ One row per concept. Result is one of: not yet, shaky, solid. The agent updates 
 
 | Concept | Introduced | Lesson | Last check | Result | Notes |
 |---|---|---|---|---|---|
-| (empty until Phase 0) | | | | | |
+| How to read a research paper | 2026-10-10 | [L00](lessons/L00_how_to_read_a_paper.md) | | not yet | Check questions at the end of the lesson |
