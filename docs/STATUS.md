@@ -6,40 +6,44 @@ tags: [status]
 
 # STATUS
 
-Last updated: 2026-10-10, machine Photon (laptop). Branch `docs/6-phase-r-plan`.
+Last updated: 2026-10-10 (second session), machine Photon (laptop). Branch `docs/6-phase-r-plan`.
 
 ## Current position
 
 - Stage 1, step R (Research and architecture), issue #6.
-- Phase R step 1 (design questions) drafted; step 2 (literature search) not started.
+- Phase R step 1 (design questions) drafted; step 2 (literature search and dataset search) not started.
+- Project vision recorded (PR #20, issue #19): two stages inside the FYP; Stage 1, the full application on a country with good open data, is the only focus; the motivation is to learn the standards for building such a system end to end. See `agent/PROJECT_CONTEXT.md` section 1a and `playbook/`.
 
 ## Done
 
 - Project kit imported (`bda08a0`); labels, milestones, seed issues #6 to #13 exist on GitHub.
 - First session: STATUS, lab notebook, machine record, [design questions](architecture/design_questions.md), [hypothesis register](architecture/hypothesis_register.md), search log stub, lesson L00 (how to read a paper).
+- Second session: foundation guide read (PR #16); practice run of the full workflow; CI fix (PR #18); vision carried through the kit (PR #20); DQ-01 restated for the dataset search.
 
-## In progress
+## Waiting for the user (merge order)
 
-- Phase R (#6): user review of design questions and hypothesis register.
+1. **PR #18** (CI fix): mark ready, squash-merge, delete branch. Unblocks all other merges.
+2. **PR #20** (vision), **PR #16** (foundation guide), **PR #14** (this branch): click *Update branch*, wait for green `ci`, review, merge. No files overlap, so any order works.
+3. Dependabot #1 to #5: review one at a time, later.
 
 ## Next
 
-1. User reviews DQ and hypothesis drafts; answers the L00 check questions.
-2. Lesson L01: Sentinel-2 basics (curriculum item 1), then read Drusch et al. 2012 together (verify at source first).
-3. First literature search round for P1 questions (DQ-01, DQ-04, DQ-05, DQ-10); log in `research/search_log.md`.
-4. After Phase R decides the tooling: issue #7 (scaffold), which also turns CI green.
+1. User answers the L00 check questions (how to read a paper).
+2. Lesson L01: Sentinel-2 basics, then read Drusch et al. 2012 together (verify at source first).
+3. First literature and dataset search round for the P1 questions (DQ-01, DQ-04, DQ-05, DQ-10); dataset search uses the two-stage targets in `agent/DATASET_DISCOVERY.md` section 2.
+4. After Phase R decides the tooling: issue #7 (scaffold), which re-adds `cache: pip`.
 
 ## Open decisions (user)
 
-- DQ-01: the kit is inconsistent on the first dataset (Brazil-Crop in MODULE_A section 0, France in its section 8). Resolve at Checkpoint R after the audit.
-- Code licence (MIT or Apache-2.0): not yet asked; needed before scaffolding.
+- DQ-01: the Stage 1 country and dataset, decided at Checkpoint R after the search and audit.
+- Code licence (MIT or Apache-2.0): needed before scaffolding.
 
 ## Blockers and known issues
 
-- CI (`ci`) fails on `main` and on Dependabot PRs #1 to #5: `setup-python` finds no `requirements.txt`/`pyproject.toml`. CodeQL JavaScript fails because there is no JS code yet. Both expected until issue #7. Dependabot PRs left open until then.
-- Dependabot pip and npm update jobs fail for the same reason (`/apps/web` does not exist yet).
+- CI fails on every PR until PR #18 is merged. Deviation: the first session planned to leave CI red until #7; this session fixed it separately because red CI blocked merging the docs PRs.
+- `guard_bash.py` blocks any command that contains both `git push` and the word `main` (for example `gh pr create --base main` in the same command). Workaround: separate commands. Fix later with a small hook change.
+- Dependabot pip and npm update jobs fail (`/apps/web` and `pyproject.toml` don't exist yet). Harmless until #7.
 - NVIDIA driver not working on Photon (`nvidia-smi` fails). Not needed until deep models.
-- Obsidian vault was opened at `docs/learning/` instead of `docs/`; `.gitignore` expects `docs/.obsidian/`. User to reopen `docs/` as the vault.
 
 ## Compute and disk
 

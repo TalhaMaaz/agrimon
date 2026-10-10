@@ -12,9 +12,9 @@ Related: [STATUS](../STATUS.md) | [Weekly rhythm](WEEKLY_RHYTHM.md) | [Obsidian 
 
 ## 1. Right now (agent updates at /session-end)
 
-- Current phase: Phase R (research and architecture), step 1 done in draft (issue #6)
+- Current phase: Stage 1, Phase R (research and architecture), step 1 done in draft (issue #6)
 - This week's goal: review design questions and hypothesis register; L01 Sentinel-2; first paper
-- Waiting for me: draft PR for `docs/6-phase-r-plan`; L00 check questions; code licence choice
+- Waiting for me: merge PR #18 (CI fix) first, then #20, #16, #14; L00 check questions; code licence choice
 - The one concept I must understand this week: how to read a paper ([L00](lessons/L00_how_to_read_a_paper.md))
 
 ## 2. The whole system in one picture (a starting hypothesis; the validated version lives in `../architecture/architecture_dossier.md` after Phase R)
