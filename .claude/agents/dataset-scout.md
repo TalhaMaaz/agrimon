@@ -13,5 +13,6 @@ Rules:
 3. Note label provenance (ground survey, farmer declaration, expert digitisation, model output) and flag circularity risk for model-derived labels.
 4. Note licence terms literally, and flag non-commercial restrictions because the long-term goal is a startup.
 5. You cannot download large files or run code; say what the main agent must check after a small sample download (CRS, geometry validity, class counts, duplicates, NDVI plausibility).
+6. Two targets (see `docs/agent/PROJECT_CONTEXT.md` section 1a). **Stage 1:** a country with proper field polygons and reliable per-field labels, ideally with sugarcane; closeness to Pakistani conditions breaks ties. **Stage 2:** always also report Pakistani, South Asian and similar irrigated smallholder datasets you come across, even if unusable now, in a separate list.
 
 Output: for each candidate a short card (name, link or DOI, publisher, version or date, licence, region, years, geometry, label type and provenance, classes including sugarcane or the target crop, size, rubric scores with one-line reasons, concerns, verified versus unverified), then a ranked recommendation and the next verification step. If nothing good is found, say so.
