@@ -344,6 +344,61 @@ The **intro presentation** (about two weeks after 2026-10-27) sets the pace. It 
 
 (Your questions after reading go here, with the answers.)
 
+### Q1 (2026-10-27): Where did the briefings folder go while I was reading it?
+
+It never left; it was on a different **branch**. B01 was in PR #28 on branch `docs/6-briefings`, not yet merged into `main`. For your next question I switched the laptop to a new branch made from `main`, and Git swaps the files on disk to match whichever branch is checked out. `main` didn't have `docs/briefings/` yet, so Obsidian saw it vanish. Switching back (`git switch docs/6-briefings`) brought it back.
+
+```
+ main ----------------------------------  (no briefings/ yet)
+        \-- docs/6-briefings  (B01 here, PR #28)
+        \-- docs/6-louisiana-related-work  (PR #29)
+ the laptop shows ONE branch at a time; switching changes the files you see
+```
+
+Once PR #28 is merged, the folder is on `main` and stays visible on every branch made after that. Lesson for me: don't switch branches under a document you're reading. Keep the reading branch checked out, or ask you to merge first.
+
+### Q2 (2026-10-27): Why exactly did we choose the US dataset?
+
+Short answer: it's the only candidate we could **verify** covers all four capabilities of the app, with labels accurate enough for sugarcane and no licence restrictions. You made the decision on 2026-10-27; it will be confirmed by an ADR at Checkpoint R.
+
+**1. The test it had to pass.** Since the audit, the dataset isn't chosen for crop classification alone. It must carry the whole app ([product spec](../architecture/product_spec.md) section 4):
+
+| Capability | What the US stack gives | Brazil-Crop | La Réunion | Europe |
+|---|---|---|---|---|
+| P-1 polygons, past **and** recent | CSB: yearly field boundaries in editions up to 2018-2025 | 2020-21 only | probably yearly, **unverified** | yearly |
+| P-2 crop labels, sugarcane | CDL every year since 2008, sugarcane at about 95 % accuracy | survey labels, two seasons per region | declared, **unverified** | no sugarcane |
+| P-3 health: history + recent fields + events | many years of labelled fields; hurricanes, freezes, droughts documented | no recent fields, 2 seasons | cloudy island, unverified | yes |
+| P-4 yield | state yields confirmed; parish data likely (area confirmed by Di Tommaso 2024) | unverified | unverified | unverified |
+| Licence | public domain | CC BY 4.0 | open licence, unverified at parcel level | varies |
+
+Only the US column has no "unverified" and no "no".
+
+**2. Why the many years matter.** They aren't about having more data; each one is needed for something specific:
+- **Honest evaluation:** we can train on some years and test on a year the model never saw (the "held-out year"). With two seasons, as in Brazil-Crop, that's barely possible.
+- **Health layer:** "is this field unhealthy?" means "is it growing worse than a normal cane field at this stage?" To know "normal", we need many past seasons of healthy cane.
+- **Live demo and near-real-time health:** these need field boundaries for a **recent** season, so today's satellite images can be read per field. CSB goes up to 2025; Brazil-Crop stops in 2021.
+
+**3. Why the labels are good enough.** CDL sugarcane: producer's accuracy 94.1 to 97.2 %, user's accuracy 94.8 to 96.4 % (Louisiana 2020, 2022, 2023; Florida 2020, 2022), checked against farmer-reported FSA field records. A peer-reviewed paper (Di Tommaso et al. 2024) independently reports above 93 % for Louisiana.
+
+**4. Why public domain matters.** No restriction on the thesis, on publishing maps, or on later commercial use (the reason licences are "kept in view").
+
+**5. Why Louisiana within the US.**
+- Cane grows next to soybean, rice and corn, so cane vs non-cane is a real task, not a trivial one.
+- There are well-documented stress events to test the health layer.
+- Related work exists to compare against: Hu et al. 2022 for yield, NASS flood mapping ([related work](../research/related_work_louisiana.md), PR #29).
+
+**What we gave up (say these in the viva):**
+- **Labels come from a model, not ground survey.** Our model partly learns CDL's mistakes (circularity). Mitigation: CDL's cane error is about 5 %; we check the labels against the independent GEDI-based map and against year-to-year consistency; we never claim to beat "the truth".
+- **The boundaries come from a model too.** CSB is built from CDL, so a field outline can be imperfect.
+- **The accuracy is per pixel**, not per field, and may be slightly optimistic.
+- **Least like Pakistan.** Large mechanised farms, unlike Pakistani smallholdings. The pipeline and the standards transfer; the trained model doesn't. That's expected in Stage 1.
+
+**What would change the decision** (checked in the next session's Louisiana data check):
+- CSB files turn out not to carry a crop per year.
+- Too few or too small cane fields in Louisiana.
+- Cloud cover too heavy for usable time series.
+- Licence wording that differs from "public domain".
+
 ---
 
 ## 14. Check yourself
