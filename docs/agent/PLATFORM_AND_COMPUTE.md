@@ -51,4 +51,4 @@ Recommendation (flagged as a trade-off): make the repository PUBLIC if the unive
 
 ## 5. Disk budget
 
-Default 60 GB for the project on the laptop; the lab PC may take larger caches (record paths in a config, never in code). Brazil-Crop is about 10 GB mostly photos: download only vector files unless photos are needed.
+The 60 GB default was lifted by the user on 2026-10-27: the laptop has plenty of space, downloaded datasets are kept (not deleted after clipping), and disk use is logged in STATUS. Streaming per-parcel features (rule 9) still applies to imagery. The lab PC may take larger caches (record paths in a config, never in code). Brazil-Crop is about 10 GB mostly photos: download only vector files unless photos are needed.
