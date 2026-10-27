@@ -8,7 +8,7 @@ tags: [map, start-here]
 
 This is the human-facing front page of the project. Open it first in Obsidian every working day. The agent keeps the status lines current; you keep the checkboxes honest.
 
-Related: [STATUS](../STATUS.md) | [Weekly rhythm](WEEKLY_RHYTHM.md) | [Obsidian guide](OBSIDIAN_GUIDE.md) | [Understanding ledger](understanding_ledger.md) | [Glossary](../glossary.md) | [Reading list](../agent/READING_LIST.md) | [Roadmap](../agent/ROADMAP.md)
+Related: [STATUS](../STATUS.md) | [Briefings](../briefings/README.md) (latest: [B01 the whole picture](../briefings/B01_the_whole_picture.md)) | [Weekly rhythm](WEEKLY_RHYTHM.md) | [Obsidian guide](OBSIDIAN_GUIDE.md) | [Understanding ledger](understanding_ledger.md) | [Glossary](../glossary.md) | [Reading list](../agent/READING_LIST.md) | [Roadmap](../agent/ROADMAP.md)
 
 ## 1. Right now (agent updates at /session-end)
 
