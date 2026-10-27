@@ -44,6 +44,7 @@ A phase is not finished until all of these exist and are committed:
 | `docs/data/` | `data_dictionary.md`, `licences.md`, `lineage.md` (counts retained and dropped at each step, with reasons). |
 | `docs/playbook/` | Standards that transfer to Pakistan (Stage 2) and to building the system properly: one note per lifecycle stage, written as phases finish. See PROJECT_CONTEXT section 1a. |
 | `docs/concepts/` | One explainer per key concept: definition, intuition via programming analogy, why used here, alternatives with pros and cons, pitfalls, references. |
+| `docs/briefings/` | Catch-up documents written on the user's request: the whole picture (plan, decisions, reasons, knowledge base) at one point in time. Snapshots, never rewritten; questions and answers kept in each. See its README. |
 | `docs/learning/` | Curriculum, lessons, walkthroughs, quizzes, understanding ledger, user's notes. See TEACHING_PROTOCOL. |
 | Registers | `assumptions_register.md`, `risk_register.md`, `claims_register.md`, `threats_to_validity.md`, `glossary.md`. |
 | `docs/defence/` | `viva_questions.md`, `demo_script.md`, `slide_outline.md`, `limitations_and_future_work.md`. |
