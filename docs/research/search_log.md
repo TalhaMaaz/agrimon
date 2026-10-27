@@ -20,3 +20,8 @@ One row per literature search: date, design question, source searched, exact que
 | 2026-10-27 R1-07 | DQ-01, DQ-23 | web search, data.gouv.fr | Registre Parcellaire Graphique La Réunion canne à sucre; RPG IGN téléchargement La Réunion | 10 + 10 + RPG 2020 page | [catalogue S-RE](dataset_catalogue.md) (Réunion parcel access unverified; portal timed out) |
 | 2026-10-27 R1-08 | DQ-01 | web search | Reunion Island land cover reference dataset sugarcane plots CIRAD Dataverse Sentinel-2 | 10 | catalogue S-RE (CIRAD 2017 reference database) |
 | 2026-10-27 R1-09 | DQ-02 | web search | Microsoft Planetary Computer STAC API sentinel-2-l2a 2026 status retirement | 9 | no retirement notice found; live test failed (network); retest |
+| 2026-10-27 R2-01 | DQ-01, DQ-14 | web search (extended) | Louisiana sugarcane Sentinel-2 classification mapping remote sensing | 10 | [related work 2a, 2f](related_work_louisiana.md) |
+| 2026-10-27 R2-02 | DQ-22 | web search (extended) | Louisiana sugarcane yield prediction satellite remote sensing NDVI | 9 | related work 2b, 2c |
+| 2026-10-27 R2-03 | DQ-18 | web search | Louisiana sugarcane hurricane damage freeze stress satellite monitoring Sentinel | 9 | related work 2d, 2e |
+| 2026-10-27 R2-04 | DQ-22 | web search, OpenAlex | Hu Shi Zha Zeng 2022 Remote Sensing sugarcane yield estimation MODIS Florida Louisiana | 10 + OpenAlex record | related work 2b |
+| 2026-10-27 R2-05 | DQ-01 | ESSD article page | essd-16-4931-2024 | 1 | related work 2a |
