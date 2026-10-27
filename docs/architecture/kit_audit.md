@@ -103,7 +103,7 @@ The kit lists "Pakistan Sentinel-2 field time series (Zenodo record 22806700)" a
 
 Why it matters: Stage 2 starts from a real dataset. If it holds only time series (no polygons), the Stage 1 pipeline should accept "per-field time series" as an input, separate from "polygons plus imagery". That is a design choice to make now, cheaply (affects H-01 and the label-adapter interface, issue #11). It does **not** change the Stage 1 focus.
 
-Not yet done: download and inspect it (needs approval; 51.4 MB, under the 500 MB rule).
+User decision (2026-10-27): not now. Focus on Stage 1; Pakistan data is revisited in Stage 2. The record stays in the catalogue as a Stage 2 lead; no download.
 
 ### F-08 (medium): issues #10 to #13 assume the old plan
 
@@ -134,8 +134,8 @@ The L00 and F1–F6 check questions are about method, not kit facts, so they sta
     (screens, outputs, refresh, user) -> capability list
  3. capability -> data requirements matrix (F-02)
  4. revise design questions + hypothesis register
-    (new: DQ-21 sugarcane cycle, DQ-22 per-field-series input,
-     DQ-23 data stack coverage; H-08/H-12 re-framed)
+    (new: DQ-21 sugarcane cycle, DQ-22 yield data,
+     DQ-23 current-season polygons; H-08/H-12 re-framed)
  5. dataset search round with the coverage criterion (DQ-01)
  6. rewrite ROADMAP, MODULE_A/B/C (dataset-neutral), milestones, issues
  7. Checkpoint R as before

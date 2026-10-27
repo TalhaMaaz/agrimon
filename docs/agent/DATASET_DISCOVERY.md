@@ -45,6 +45,7 @@ Open data portals and catalogues (Source Cooperative, Zenodo, Hugging Face datas
 8. Documentation and reported validation quality
 9. Accessibility and ease of use (format, size, stability of hosting)
 10. Maintenance and versioning
+11. **Module and demo coverage** (added 2026-10-27, kit audit F-02): how many of the product capabilities P-1 to P-4 in `docs/architecture/product_spec.md` section 4 the source, or the stack of sources for one region, supports: polygons for labelled and recent seasons, crop labels, multi-year imagery history and documented events for health, yield statistics. Weighted double for the Stage 1 choice.
 
 ## 5. Verification checklist before adoption
 
