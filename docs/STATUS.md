@@ -15,6 +15,11 @@ Last updated: 2026-10-27 (context refresh after a 17-day break), machine Photon 
 - Pre-Phase-R setup is complete: CI green, Actions up to date, hook fixed, vision in the kit. No open PRs except this session-end PR.
 - Project vision recorded (PR #20, issue #19): two stages inside the FYP; Stage 1, the full application on a country with good open data, is the only focus; the motivation is to learn the standards for building such a system end to end. See `agent/PROJECT_CONTEXT.md` section 1a and `playbook/`.
 
+## Near-term goal
+
+- FYP introductory presentation, about two weeks after 2026-10-27: plan, deliverables, what can and cannot be done, plus slides. Drives the Phase R order (see `architecture/product_spec.md`).
+- Kit audit done 2026-10-27 (`architecture/kit_audit.md`): the kit plans bottom-up from one module and one dataset; re-plan from the product spec.
+
 ## Done
 
 - Project kit imported (`bda08a0`); labels, milestones, seed issues #6 to #13 exist on GitHub.
