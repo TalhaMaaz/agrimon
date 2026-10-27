@@ -28,7 +28,9 @@ Round 1: 2026-10-27, search log rows R1-01 to R1-08. Status values: candidate, v
 
 ## 2. Candidates
 
-### S-US: US sugarcane belt (Florida, Louisiana), status: candidate (strongest coverage so far)
+### S-US: US sugarcane belt (Florida, Louisiana), status: chosen by the user 2026-10-27 (confirmed by ADR at Checkpoint R)
+
+User decision (2026-10-27): work with the US stack. The labels are model-derived but accurate; other datasets are added only where a capability needs them (section 2a).
 
 | Source | What was checked (2026-10-27) | Not verified |
 |---|---|---|
@@ -36,13 +38,33 @@ Round 1: 2026-10-27, search log rows R1-01 to R1-08. Status values: candidate, v
 | USDA NASS Cropland Data Layer (CDL) | Code 45 is Sugarcane. Florida 2022: producer's accuracy 96.5 %, user's accuracy 96.2 % for sugarcane; overall 87.4 % (crop classes). Trained and validated on FSA Common Land Unit data. "Public domain and free to redistribute" ([FL 2022 metadata](https://data.nass.usda.gov/Research_and_Science/Cropland/metadata/metadata_fl22.htm)) | Louisiana sugarcane accuracy; other years |
 | NASS sugarcane yield statistics | State-level yields for Florida and Louisiana in net tons per acre appear in archived NASS sugarcane reports (for example 2005, 2007) | County or parish level yields in Quick Stats |
 
+**CDL sugarcane accuracy (code 45), from NASS metadata, checked 2026-10-27**
+
+| State, year | Producer's accuracy | User's accuracy | Validation pixels correct | Overall (crop classes) | Source |
+|---|---|---|---|---|---|
+| Louisiana 2020 | 94.3 % | 96.2 % | 88,253 | 89.2 % | [metadata_la20](https://data.nass.usda.gov/Research_and_Science/Cropland/metadata/metadata_la20.htm) |
+| Louisiana 2022 | 94.1 % | 95.8 % | 84,398 | 89.4 % | [metadata_la22](https://data.nass.usda.gov/Research_and_Science/Cropland/metadata/metadata_la22.htm) |
+| Louisiana 2023 | 95.0 % | 96.4 % | 88,638 | 91.0 % | [metadata_la23](https://data.nass.usda.gov/Research_and_Science/Cropland/metadata/metadata_la23.htm) |
+| Florida 2020 | 97.2 % | 94.8 % | 77,204 | 85.9 % | [metadata_fl20](https://data.nass.usda.gov/Research_and_Science/Cropland/metadata/metadata_fl20.htm) |
+| Florida 2022 | 96.5 % | 96.2 % | 51,371 | 87.4 % | [metadata_fl22](https://data.nass.usda.gov/Research_and_Science/Cropland/metadata/metadata_fl22.htm) |
+
+How to read it:
+- **Producer's accuracy** is the share of real sugarcane that the CDL labels sugarcane; it is 100 % minus the omission error.
+- **User's accuracy** is the share of CDL "sugarcane" that really is sugarcane; it is 100 % minus the commission error.
+
+What "ground truth" means here:
+- The reference is "independent validation data sets generated from the FSA CLU data". These are Farm Service Agency field records that farmers report: declarations, not field surveys.
+- Accuracy is per **pixel** (30 m), not per field.
+- The metadata does not say how the validation pixels are kept spatially apart from the training pixels, so the figures may be optimistic (DQ-10).
+- 2024 and 2025 metadata were not found at the same URL pattern (404); check later.
+
 - **Strengths:** every capability has a source; annual polygons up to 2025 allow a recent-season health layer; many years for health baselines and held-out-year splits; public domain; a sugarcane industry with mills (aligns with the product).
 - **Concerns:**
   - The labels are **model output** (CDL), so there is a circularity risk (rubric criterion 2): a model trained on CDL partly learns CDL's errors. The sugarcane accuracy is high, but it must be stated in the thesis.
   - Large mechanised farms, unlike Pakistan.
   - The CSB boundaries are themselves derived from CDL.
 
-### S-RE: La Reunion (France), status: candidate (needs verification first)
+### S-RE: La Reunion (France), status: candidate (parked 2026-10-27; possible second dataset)
 
 | Source | What was checked (2026-10-27) | Not verified |
 |---|---|---|
@@ -74,7 +96,19 @@ Round 1: 2026-10-27, search log rows R1-01 to R1-08. Status values: candidate, v
 
 - Zenodo 22806700, "Sentinel-2 Field-Level Crop Phenology Time Series in Pakistan (85,618 Fields, 79 Districts, Rabi & Kharif)", CC BY 4.0, 2026-09-17. Recorded only; not downloaded (user, 2026-10-27).
 
-## 3. Recommendation after round 1
+## 2a. Other sources in the S-US workflow (only where a capability needs them)
+
+| Need | Source (to verify before use) | Needed? |
+|---|---|---|
+| Imagery | Sentinel-2 L2A via STAC (DQ-02) | yes, core |
+| Imagery under cloud | Sentinel-1 radar (DQ-03) | decide by spike: Louisiana summers are humid and cloudy |
+| P-3 health context | gridded weather (for example gridMET, Daymet or ERA5), soil moisture (for example SMAP) | yes, to separate weather-wide change from field problems (MODULE_B layer 4) |
+| P-3 health validation | documented events: US Drought Monitor, hurricane records; NASS weekly Crop Progress and Condition reports, if they rate sugarcane | yes: these give the "documented events" the health layer is validated against. Coverage of sugarcane is unverified |
+| P-4 yield | NASS Quick Stats county or parish sugarcane yield, or state level as a fallback | yes, for P-4 |
+| Field boundaries | CSB already provides them; Fields of The World not needed | no |
+| Second label set | Brazil-Crop (ground survey) or La Reunion (declared) | not needed. Optional later only if the thesis needs a check that the model does more than imitate CDL |
+
+## 3. Recommendation after round 1 (superseded by the user's choice of S-US)
 
 1. **Verify S-RE first.** If the open RPG gives La Reunion parcels with crop codes over several years, it combines declared labels, sugarcane and smaller fields, which is the best fit to the spec on paper.
 2. **Verify S-US in parallel:** CSB attributes, county yields, a small CSB sample for one sugarcane county (under 500 MB, ask first). It already covers every capability, at the cost of model-derived labels.
