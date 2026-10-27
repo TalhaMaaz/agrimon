@@ -15,3 +15,5 @@ One row per concept. Result is one of: not yet, shaky, solid. The agent updates 
 | Issue → branch → PR chain and `Closes #N` | 2026-10-10 | [F4](foundation/F4_github.md), practice run | 2026-10-10 | solid (self-reported) | |
 | CI workflows, required checks, ruleset | 2026-10-10 | [F4](foundation/F4_github.md), practice run | 2026-10-10 | solid (self-reported) | Fixed the `cache: pip` failure in #18 |
 | Claude Code hooks vs server-side guards | 2026-10-10 | [F2](foundation/F2_claude_code_kit.md), practice run | 2026-10-10 | solid (self-reported) | Saw a hook false positive live |
+| Merge conflicts (adjacent-line edits) and resolving them | 2026-10-10 | [Notebook](../lab_notebook/2026-10-10.md), PR #3 | | not yet | Seen live on #3; resolved by the agent. Check: why did #2 and #3 conflict? |
+| Squash merge and why the branch then looks "diverged" | 2026-10-10 | [F4](foundation/F4_github.md), notebook | | not yet | |
