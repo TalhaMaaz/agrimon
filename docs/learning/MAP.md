@@ -12,10 +12,10 @@ Related: [STATUS](../STATUS.md) | [Weekly rhythm](WEEKLY_RHYTHM.md) | [Obsidian 
 
 ## 1. Right now (agent updates at /session-end)
 
-- Current phase: Stage 1, Phase R (research and architecture), step 1 done in draft (issue #6)
-- This week's goal: review design questions and hypothesis register; L01 Sentinel-2; first paper
-- Waiting for me: review design questions and hypothesis register; L00 check questions; code licence choice (before #7)
-- The one concept I must understand this week: how to read a paper ([L00](lessons/L00_how_to_read_a_paper.md))
+- Current phase: Stage 1, Phase R, re-planning from the [product spec](../architecture/product_spec.md) (issue #6)
+- This week's goal: Louisiana data check; roadmap rewrite; content for the intro presentation (about two weeks after 2026-10-27)
+- Waiting for me: review PR #27; close #8; delete merged branches; approve the Louisiana sample download when asked
+- The one concept I must understand this week: producer's vs user's accuracy, and why model-derived labels carry a circularity risk
 
 ## 2. The whole system in one picture (a starting hypothesis; the validated version lives in `../architecture/architecture_dossier.md` after Phase R)
 
@@ -24,7 +24,7 @@ Related: [STATUS](../STATUS.md) | [Weekly rhythm](WEEKLY_RHYTHM.md) | [Obsidian 
  ---------                    --------                          -------
  field polygons  --+
  + crop labels     |   +------------------+
- (Brazil-Crop)     +-->| label adapter    |--> clean parcels + spatial splits
+ (US: CSB + CDL)  +-->| label adapter    |--> clean parcels + spatial splits
                        +------------------+              |
  Sentinel-2 images --> STAC stream --> cloud mask --> composites --> per-parcel
  (Planetary Computer)                                      time series (parquet)

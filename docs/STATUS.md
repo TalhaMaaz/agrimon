@@ -6,14 +6,13 @@ tags: [status]
 
 # STATUS
 
-Last updated: 2026-10-27 (context refresh after a 17-day break), machine Photon (laptop). Branch `docs/6-close-session-2`.
+Last updated: 2026-10-27 (end of session 3), machine Photon (laptop). Branch `docs/6-kit-audit` (draft PR #27).
 
 ## Current position
 
-- Stage 1, step R (Research and architecture), issue #6.
-- Phase R step 1 (design questions, hypothesis register) drafted and merged (#14), waiting for the user's review; step 2 (literature search and dataset search) not started.
-- Pre-Phase-R setup is complete: CI green, Actions up to date, hook fixed, vision in the kit. No open PRs except this session-end PR.
-- Project vision recorded (PR #20, issue #19): two stages inside the FYP; Stage 1, the full application on a country with good open data, is the only focus; the motivation is to learn the standards for building such a system end to end. See `agent/PROJECT_CONTEXT.md` section 1a and `playbook/`.
+- Stage 1, step R (Research and architecture), issue #6. Re-planning after the kit audit.
+- Re-plan step 1 done: [kit audit](architecture/kit_audit.md), [product spec](architecture/product_spec.md), revised design questions and hypotheses.
+- Re-plan step 2 started: dataset round 1 ([catalogue](research/dataset_catalogue.md)). **User decision 2026-10-27: US stack (USDA CSB boundaries + CDL labels), starting with Louisiana.** ADR at Checkpoint R.
 
 ## Near-term goal
 
@@ -22,25 +21,27 @@ Last updated: 2026-10-27 (context refresh after a 17-day break), machine Photon 
 
 ## Done
 
-- Project kit imported (`bda08a0`); labels, milestones, seed issues #6 to #13 exist on GitHub.
-- First session: STATUS, lab notebook, machine record, [design questions](architecture/design_questions.md), [hypothesis register](architecture/hypothesis_register.md), search log stub, lesson L00 (how to read a paper).
-- Second session: foundation guide read (PR #16); practice run of the full workflow; CI fix (PR #18); vision carried through the kit (PR #20); DQ-01 restated (PR #14). All four merged by the user; branches deleted; laptop synced. Hook false positives fixed with tests (PR #22); glossary created; Dependabot #1 to #5 reviewed and merged (resolved a conflict on #3 by hand).
+- Sessions 1 and 2 (2026-10-10): kit imported, foundation guide, workflow practice, CI and hook fixes, vision recorded, Dependabot #1 to #5. See the notebook for 2026-10-10.
+- Session 3 (2026-10-27): #23 to #26 merged by the user; kit audit; product spec; DQ-21 to DQ-23 and H-19 to H-24; rubric criterion 11; dataset round 1; CDL sugarcane accuracy recorded (producer's 94.1 to 97.2 %, user's 94.8 to 96.4 %).
 
 ## Waiting for the user
 
-1. This session-end PR #23 (notebook, STATUS, HANDOFF, MAP, ledger): review, merge.
-2. Dependabot PRs opened during the break, all green and touching different files: #24 (`actions/labeler` v5 to v7), #25 (`amannn/action-semantic-pull-request` v5 to v6), #26 (`github/codeql-action` v3 to v4). Release notes checked 2026-10-27: the breaking changes are Node.js 24 and ESM inside the actions; our workflow inputs are unaffected.
+1. Review and merge draft PR #27 (audit, product spec, questions, catalogue, session docs).
+2. Close issue #8 (CI setup is done) and delete the merged branches (`docs/6-close-session-2`, `dependabot/.../labeler-7`, `dependabot/.../codeql-action-4`).
 
 ## Next
 
-1. User answers the L00 check questions (how to read a paper).
-2. Lesson L01: Sentinel-2 basics, then read Drusch et al. 2012 together (verify at source first).
-3. First literature and dataset search round for the P1 questions (DQ-01, DQ-04, DQ-05, DQ-10); dataset search uses the two-stage targets in `agent/DATASET_DISCOVERY.md` section 2.
-4. After Phase R decides the tooling: issue #7 (scaffold), which re-adds `cache: pip`.
+1. Louisiana data check: CSB attributes; a small CSB sample for one cane parish (under 500 MB, ask first); field counts and sizes; NASS parish yields (DQ-22); whether Crop Progress rates sugarcane.
+2. Retest the imagery source (Planetary Computer STAC; Earth Search fallback).
+3. Re-plan step 3: survey-depth literature on crop type, health signals and sugarcane yield.
+4. Re-plan step 4: rewrite ROADMAP, MODULE_A/B/C (dataset-neutral), milestones, issues #10 to #13.
+5. Presentation content and deck; `/viva-drill` rehearsal.
 
 ## Open decisions (user)
 
-- DQ-01: the Stage 1 country and dataset, decided at Checkpoint R after the search and audit.
+- DQ-01: US stack chosen (Louisiana); years and the exact study area still open.
+- DQ-14: binary cane vs non-cane, or multi-class shown as cane vs non-cane (H-19).
+- P-4 yield priority: decided once the yield data level is known (DQ-22).
 - Code licence (MIT or Apache-2.0): needed before scaffolding.
 
 ## Blockers and known issues

@@ -17,3 +17,7 @@ One row per concept. Result is one of: not yet, shaky, solid. The agent updates 
 | Claude Code hooks vs server-side guards | 2026-10-10 | [F2](foundation/F2_claude_code_kit.md), practice run | 2026-10-10 | solid (self-reported) | Saw a hook false positive live |
 | Merge conflicts (adjacent-line edits) and resolving them | 2026-10-10 | [Notebook](../lab_notebook/2026-10-10.md), PR #3 | | not yet | Seen live on #3; resolved by the agent. Check: why did #2 and #3 conflict? |
 | Squash merge and why the branch then looks "diverged" | 2026-10-10 | [F4](foundation/F4_github.md), notebook | | not yet | |
+| Product spec drives data needs (top-down planning) | 2026-10-27 | [Product spec](../architecture/product_spec.md), [kit audit](../architecture/kit_audit.md) | | not yet | Check: why did the kit's dataset choice not fit the whole application? |
+| Producer's vs user's accuracy (omission vs commission) | 2026-10-27 | [Catalogue S-US](../research/dataset_catalogue.md) | | not yet | CDL sugarcane: 94 to 97 % / 95 to 96 % |
+| Model-derived labels and circularity | 2026-10-27 | [DATASET_DISCOVERY rubric](../agent/DATASET_DISCOVERY.md), H-24 | | not yet | |
+| Sugarcane as a semi-perennial crop (ratoons) | 2026-10-27 | [Kit audit F-03](../architecture/kit_audit.md) | | not yet | Lesson to come with DQ-21 |
