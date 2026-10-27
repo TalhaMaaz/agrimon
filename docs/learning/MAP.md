@@ -24,7 +24,7 @@ Related: [STATUS](../STATUS.md) | [Weekly rhythm](WEEKLY_RHYTHM.md) | [Obsidian 
  ---------                    --------                          -------
  field polygons  --+
  + crop labels     |   +------------------+
- (US: CSB + CDL)  +-->| label adapter    |--> clean parcels + spatial splits
+ (US: CSB + CDL)   +-->| label adapter    |--> clean parcels + spatial splits
                        +------------------+              |
  Sentinel-2 images --> STAC stream --> cloud mask --> composites --> per-parcel
  (Planetary Computer)                                      time series (parquet)
