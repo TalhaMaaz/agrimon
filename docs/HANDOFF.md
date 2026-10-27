@@ -6,7 +6,7 @@ tags: [handoff]
 
 # Handoff (overwritten at every /handoff; history is in Git)
 
-Last updated: 2026-10-10, Photon (laptop)
+Last updated: 2026-10-27, Photon (laptop)
 Branch: `docs/6-close-session-2` (session-end PR); everything else is on `main`
 Last commit: see `git log -1` on that branch
 
@@ -15,7 +15,7 @@ Setup before Phase R, now complete: CI fixed (#18), vision carried through the k
 
 ## State of the work
 - Done: everything above; Photon synced with `main` (only branch).
-- In progress: the session-end PR, waiting for the user to merge.
+- In progress: the session-end PR #23 and Dependabot PRs #24 to #26, waiting for the user to merge.
 - Not started: Phase R step 2 (literature and dataset search).
 
 ## Commands to resume (copy-paste)

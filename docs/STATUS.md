@@ -6,7 +6,7 @@ tags: [status]
 
 # STATUS
 
-Last updated: 2026-10-10 (end of second session), machine Photon (laptop). Branch `docs/6-close-session-2`.
+Last updated: 2026-10-27 (context refresh after a 17-day break), machine Photon (laptop). Branch `docs/6-close-session-2`.
 
 ## Current position
 
@@ -23,7 +23,8 @@ Last updated: 2026-10-10 (end of second session), machine Photon (laptop). Branc
 
 ## Waiting for the user
 
-1. This session-end PR (notebook, STATUS, HANDOFF, MAP, ledger): review, merge.
+1. This session-end PR #23 (notebook, STATUS, HANDOFF, MAP, ledger): review, merge.
+2. Dependabot PRs opened during the break, all green and touching different files: #24 (`actions/labeler` v5 to v7), #25 (`amannn/action-semantic-pull-request` v5 to v6), #26 (`github/codeql-action` v3 to v4). Release notes checked 2026-10-27: the breaking changes are Node.js 24 and ESM inside the actions; our workflow inputs are unaffected.
 
 ## Next
 
