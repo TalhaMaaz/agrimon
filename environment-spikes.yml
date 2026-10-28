@@ -1,0 +1,34 @@
+# Phase R spike environment only (throwaway exploration notebooks).
+# The real project environment is decided in the scaffold, issue #7.
+# Exact versions installed are recorded in environment-spikes.lock.txt
+# (mamba list --explicit), so the spikes can be reproduced.
+name: agrimon-spikes
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12          # 3.14 is too new for parts of the geospatial stack
+  # vector and raster I/O (GDAL, PROJ, GEOS come in with these)
+  - geopandas
+  - pyogrio              # fast GDAL-based reader used by geopandas
+  - pyarrow              # GeoParquet output
+  - rasterio
+  - rioxarray
+  - shapely
+  - pyproj
+  - xarray
+  - dask
+  # satellite imagery access (STAC catalogues)
+  - pystac-client
+  - planetary-computer
+  - odc-stac
+  # analysis and plots
+  - pandas
+  - numpy
+  - matplotlib
+  - folium               # interactive web maps inside notebooks
+  - mapclassify          # needed by geopandas .explore()
+  # notebooks and utilities
+  - jupyterlab
+  - ipykernel
+  - requests
+  - python-dotenv        # reads API keys from .env (never committed)

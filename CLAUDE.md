@@ -35,7 +35,7 @@ Talha, final-year CS student, Ubuntu, Python and JavaScript. Knows basic ML and 
 6. Never invent numbers, URLs, DOIs, citations, licences or API behaviour. Verify or say so. References enter `references.bib` only after verification.
 7. Record negative results and deviations honestly. Observation and interpretation are separate.
 8. Reproducible: pinned environment, YAML configs, fixed seeds, Makefile targets, versioned data manifests.
-9. Never cache whole scenes; stream and keep per-parcel features. Disk budget 60 GB. Long jobs are chunked, resumable and logged.
+9. Never cache whole scenes; stream and keep per-parcel features. No fixed disk budget (user, 2026-10-27: plenty of space; keep downloaded datasets, log disk use in STATUS). Long jobs are chunked, resumable and logged.
 10. Record each dataset's licence before use. Never commit data, rasters, weights, credentials or `.env`.
 11. Stop and ask when scope, cost or the thesis story changes, or a network call is blocked. Do not work around blocks.
 12. Git: issue, branch, Conventional Commits, draft PR, green CI. Never push to `main`, never merge. The user reviews and merges. The user does not want "you try first" exercises: Claude Code is the primary developer, the user must still be able to explain everything. Announce and log every repository-settings change. See `GITHUB_WORKFLOW.md`.
