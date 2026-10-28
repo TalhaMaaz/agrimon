@@ -57,8 +57,10 @@ Figures:
 - **All three decision rules pass.** CSB is adopted, provisionally, as the polygon and label source for Iberia. The adoption becomes final in the DQ-01 ADR at Checkpoint R.
 - **The crop histories show the expected cane cycle:** plant cane, two or three ratoon crops, one fallow year, replant. This supports treating sugarcane by cycle stage rather than as an annual crop (DQ-21; H-20 is expected to fail). It also gives a free label: the year after a fallow year is plant cane.
 - **In Iberia, "non-cane" is mostly fallow cane land.** Of the 1,419 non-cane fields in 2023, 829 were fallow, and many of those are part of the cane cycle. So a binary cane vs non-cane model here mostly learns "cane vs bare or fallow field", which is likely easy. That makes binary attractive for the product (DQ-14), but it is a weaker test of crop discrimination. A harder second area with more soybeans and rice (Pointe Coupee, or St. Landry) would test it properly.
-- **The boundaries are derived from pixels, not surveyed.** The smooth blob outlines and the 0.5 ha floor are consistent with polygons built from 30 m CDL pixels. A CSB "field" may merge several real fields that share a history. Acceptable for a prototype; to state in the thesis.
+- **The boundaries are derived from pixels, not surveyed.** The metadata confirms it: no manual drawing, polygons under 1 ha merged into neighbours, outlines simplified at 60 m tolerance. That explains the smooth blob outlines and the missing small fields. A CSB "field" may merge several real fields that share a history. Acceptable for a prototype; to state in the thesis.
 - **Fields are large relative to 10 m pixels.** About 465 pixels per median field, so edge pixels are a small share. Pakistan's fields are much smaller; noted for Stage 2.
+
+- **The CDL itself uses Sentinel-2** (and Landsat), per the CSB metadata. The circularity risk (H-24) is therefore direct: our Sentinel-2 model learns labels from a Sentinel-2-based classifier.
 
 ## Decision
 

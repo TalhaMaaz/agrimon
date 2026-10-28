@@ -15,8 +15,11 @@ phase: R
 | Licence | "considered public domain and free to redistribute" (`NationalCSB_2018-2025_rev23_metadata.htm`, in the zip) |
 | Extent | contiguous US; 15,973,095 fields (MultiPolygon) |
 | CRS | Albers Conic Equal Area, NAD83, metres (lat. of centre 23, long. of centre -96, standard parallels 29.5 and 45.5) |
+| Column definitions | `CDL20xx` = "Majority crop type within the CSB polygon"; `INSIDE_X/Y` = "center X/Y coordinate"; `CSBID` = "CSB Identifier" (structure state + edition + number observed, not documented) |
 | Columns | `CSBID`, `CSBYEARS`, `CSBACRES`, `CDL2018`..`CDL2025` (dominant CDL code per year), `STATEFIPS`, `STATEASD`, `ASD`, `CNTY`, `CNTYFIPS`, `INSIDE_X`, `INSIDE_Y`, `ORIG_FID`, `Shape_Length`, `Shape_Area` |
-| How made | delineated from historic CDL rasters (crop sequences), so boundaries "reflect crops grown rather than ownership or tax parcels" |
+| How made | "python-based with no manual drawing of field boundaries" (metadata): CDL categories simplified, noise filtered, resampled to 10 m, road and rail lines burned in, 8 years stacked, converted to polygons; polygons under 1 ha with 2+ crop years merged into the largest neighbour; outlines simplified (Wang-Müller, 60 m tolerance). Boundaries "reflect crops grown rather than ownership or tax parcels" |
+| Label source imagery | the CDL uses Landsat 8/9 and Sentinel-2A/2B (metadata, positional accuracy section): circularity with our Sentinel-2 model |
+| Stated accuracy | crop types depend on the CDL: "generally 85% to 95% correct for the major crop-specific land cover categories" |
 | Code list | CDL categorisation codes parsed from NASS metadata (e.g. `metadata_la23.htm`); 45 = Sugarcane |
 
 ## Local copies (git-ignored, kept)
