@@ -5,6 +5,7 @@ Throwaway code for Phase R step 5 (`docs/agent/RESEARCH_AND_ARCHITECTURE.md`): s
 - Environment: `environment-spikes.yml` (exact versions in `environment-spikes.lock.txt`).
   Create with `~/miniforge3/bin/mamba env create -f environment-spikes.yml`, open with
   `~/miniforge3/envs/agrimon-spikes/bin/jupyter lab`.
+- Pitfall: run the environment's Python without activating it and GDAL/PROJ can't find their data (`proj_create_from_database ... failed`). The `agrimon-spikes` Jupyter kernel sets `PROJ_DATA` and `GDAL_DATA`; in a terminal use `mamba activate agrimon-spikes` or `mamba run -n agrimon-spikes`.
 - Data: everything under `data/` (git-ignored). Notebooks never write data elsewhere.
 - Results: each spike's question, observation, interpretation and decision go in `docs/research/spikes/`; key figures as PNG in `docs/research/spikes/figures/`.
 - Commit notebooks with outputs cleared if outputs contain large images.
