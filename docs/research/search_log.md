@@ -25,3 +25,10 @@ One row per literature search: date, design question, source searched, exact que
 | 2026-10-27 R2-03 | DQ-18 | web search | Louisiana sugarcane hurricane damage freeze stress satellite monitoring Sentinel | 9 | related work 2d, 2e |
 | 2026-10-27 R2-04 | DQ-22 | web search, OpenAlex | Hu Shi Zha Zeng 2022 Remote Sensing sugarcane yield estimation MODIS Florida Louisiana | 10 + OpenAlex record | related work 2b |
 | 2026-10-27 R2-05 | DQ-01 | ESSD article page | essd-16-4931-2024 | 1 | related work 2a |
+| 2026-11-04 R3-01 | DQ-01 | ESSD article page | essd-16-4931-2024 (full page, for Pakistan results) | 1 | [existing systems review](existing_systems_review.md) |
+| 2026-11-04 R3-02 | DQ-14 | web search; MDPI and ScienceDirect fetches returned 403 | harvest ready sugarcane pixel classification Punjab Pakistan Sentinel-2 deep learning | 10 | existing systems review (abstract only) |
+| 2026-11-04 R3-03 | existing systems | web search | satellite crop monitoring platforms comparison EOSDA OneSoil Cropin sugarcane mill | 18 (aggregators, not used as evidence) | led to vendor pages |
+| 2026-11-04 R3-04 | existing systems | vendor pages | eos.com, onesoil.ai, cropin.com | 3 | existing systems review (page depth) |
+| 2026-11-04 R3-05 | existing systems | web search | Pakistan sugarcane area estimation satellite SUPARCO crop reporting service | 10 | SUPARCO row |
+| 2026-11-04 R3-06 | existing systems | PIDE PDF | Akhtar, Discourse 2024, SUPARCO interventions | 1 | SUPARCO row |
+| 2026-11-04 R3-07 | context | web search; finance.gov.pk PDF | Pakistan Economic Survey sugarcane production area yield | 10 + Chapter 2 of 2025-26 | context figures |
