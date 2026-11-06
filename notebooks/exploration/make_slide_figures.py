@@ -40,9 +40,9 @@ print("map fields:", len(win), counts.to_dict())
 needs = ["Field\npolygons", "Cane\nlabels", "Many\nyears", "Recent\nfields", "Yield\nstats", "Open\nlicence"]
 rows = {
     "US: CSB + CDL\n(Louisiana)": ["Yes", "Yes", "Yes", "Yes", "Partly", "Yes"],
-    "La Réunion\n(RPG)":          ["Not\nverified", "Yes", "Yes", "Not\nverified", "Not\nverified", "Yes"],
-    "Brazil-Crop":                ["Yes", "Yes", "No", "No", "Not\nverified", "Yes"],
-    "EuroCrops /\nFrance":        ["Yes", "No", "Yes", "Yes", "Not\nverified", "Not\nverified"],
+    "La Réunion\n(RPG)":          ["No", "Yes", "Yes", "No", "No", "Yes"],
+    "Brazil-Crop":                ["Yes", "Yes", "No", "No", "No", "Yes"],
+    "EuroCrops /\nFrance":        ["Yes", "No", "Yes", "Yes", "No", "No"],
 }
 style = {"Yes": ("#2E7D32", "#FBFBF8"), "Partly": ("#E3C56B", INK), "No": ("#C8553D", "#FBFBF8"),
          "Not\nverified": ("#E4E6E1", MUTED)}
