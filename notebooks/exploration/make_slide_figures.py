@@ -108,3 +108,60 @@ ax.set_xlabel("year (CSB 2018–2025 labels)", fontsize=13)
 fig.savefig(OUT / "cane_fields_per_year.png", bbox_inches="tight", pad_inches=0.05, facecolor=SURF)
 plt.close(fig)
 print("cane fields per year:", dict(zip(yrs, n)))
+
+# ---- 5. why Louisiana: cane fields by state, and the crop mix around the cane ----
+cane = pd.read_parquet(ROOT / "data/interim/csb/csb1825_cane_any_2021_2023_attrs.parquet")
+c23 = cane[cane.CDL2023 == 45]
+states = {"22": "Louisiana", "12": "Florida", "48": "Texas"}
+by = c23.groupby("STATEFIPS").agg(fields=("CSBID", "size"), counties=("CNTYFIPS", "nunique")).loc[list(states)]
+mix = pd.read_parquet(ROOT / "data/interim/csb/cane_counties_LA_FL_2023_attrs.parquet")
+names = pd.read_csv(ROOT / "data/reference/cdl_codes.csv").set_index("code")["name"]
+field_crops = {"Soybeans", "Rice", "Corn", "Cotton", "Sorghum", "Winter Wheat"}
+orchards = {"Oranges", "Citrus", "Other Tree Crops", "Pecans"}
+pasture = {"Grassland/Pasture", "Fallow/Idle Cropland", "Other Hay/Non Alfalfa", "Sod/Grass Seed"}
+def group(n):
+    if n == "Sugarcane": return "Sugarcane"
+    if n in field_crops or str(n).startswith("Dbl Crop"): return "Other field crops"
+    if n in orchards: return "Orchards"
+    if n in pasture: return "Pasture or fallow"
+    return "Other"
+mix["g"] = mix.CDL2023.map(names).map(group)
+order = ["Sugarcane", "Other field crops", "Orchards", "Pasture or fallow", "Other"]
+colors = {"Sugarcane": "#2E7D32", "Other field crops": "#1F6FB0", "Orchards": "#C8742A",
+          "Pasture or fallow": "#9C7AC4", "Other": "#C9CCC4"}
+share = mix.groupby("STATEFIPS").g.value_counts(normalize=True).unstack().reindex(columns=order).fillna(0)
+print("crop mix in cane counties:\n", (share * 100).round(1).to_string())
+
+fig, (a1, a2) = plt.subplots(2, 1, figsize=(6.6, 5.6), dpi=200, gridspec_kw={"height_ratios": [1, 1.05], "hspace": 0.75})
+fig.patch.set_facecolor(SURF)
+for ax in (a1, a2):
+    ax.set_facecolor(SURF)
+    for s in ["top", "right", "bottom"]:
+        ax.spines[s].set_visible(False)
+    ax.tick_params(length=0)
+ylab = [states[s] for s in by.index][::-1]
+vals = by.fields.values[::-1]
+cols = ["#B9BDB4", "#B9BDB4", "#2E7D32"]
+a1.barh(ylab, vals, 0.62, color=cols)
+for i, (v, s) in enumerate(zip(vals, by.index[::-1])):
+    a1.text(v + 600, i, f"{v:,} fields · {by.loc[s, 'counties']} {'parishes' if s == '22' else 'counties'}",
+            va="center", fontsize=12, color=INK)
+a1.set_xlim(0, 52000); a1.set_xticks([]); a1.tick_params(axis="y", labelsize=13)
+a1.spines["left"].set_color("#B9BDB4")
+a1.set_title("Sugarcane fields, 2023", loc="left", fontsize=14, color=INK, pad=8)
+left = np.zeros(2)
+rows_ = ["22", "12"]
+for g in order:
+    v = share.loc[rows_, g].values * 100
+    a2.barh([states[r] for r in rows_], v, 0.62, left=left, color=colors[g], label=g, edgecolor=SURF, linewidth=2)
+    for i, (l, w) in enumerate(zip(left, v)):
+        if w >= 9:   # label only segments wide enough to read
+            a2.text(l + w / 2, i, f"{w:.0f}%", ha="center", va="center", fontsize=11.5,
+                    color="#FBFBF8" if g != "Other" else INK)
+    left += v
+a2.invert_yaxis(); a2.set_xlim(0, 100); a2.set_xticks([]); a2.tick_params(axis="y", labelsize=13)
+a2.spines["left"].set_color("#B9BDB4")
+a2.set_title("All fields in the main cane areas, by 2023 crop", loc="left", fontsize=14, color=INK, pad=8)
+a2.legend(loc="upper center", bbox_to_anchor=(0.42, -0.08), ncol=3, fontsize=11, frameon=False, handlelength=1.2, columnspacing=1.0)
+fig.savefig(OUT / "why_louisiana.png", bbox_inches="tight", pad_inches=0.05, facecolor=SURF)
+plt.close(fig)
