@@ -86,3 +86,25 @@ ax.legend(loc="lower center", bbox_to_anchor=(0.5, -0.3), ncol=1, fontsize=13, f
 fig.savefig(OUT / "cdl_cane_accuracy.png", bbox_inches="tight", pad_inches=0.05, facecolor=SURF)
 plt.close(fig)
 print("written:", sorted(f.name for f in OUT.iterdir()))
+
+# ---- 4. sugarcane fields per year, Iberia (CSB 2018-2025, S01) ----
+yrs = list(range(2018, 2026))
+n = [int((p[f"CDL{y}"] == 45).sum()) for y in yrs]
+fig, ax = plt.subplots(figsize=(6.6, 5.2), dpi=200)
+fig.patch.set_facecolor(SURF); ax.set_facecolor(SURF)
+ax.bar(range(len(yrs)), n, 0.72, color="#2E7D32")
+ax.axhline(1000, color="#C8553D", lw=2, ls="--")
+ax.text(len(yrs) - 0.6, 1000, "pass rule: at least 1,000", ha="right", va="center", fontsize=13, color="#9E3B26",
+        bbox=dict(facecolor=SURF, edgecolor="#C8553D", boxstyle="round,pad=0.35"))
+for i in (int(np.argmin(n)), int(np.argmax(n))):          # label only the extremes
+    ax.text(i, n[i] + 70, f"{n[i]:,}", ha="center", va="bottom", fontsize=13, color=INK)
+ax.set_xticks(range(len(yrs))); ax.set_xticklabels([f"’{y % 100:02d}" for y in yrs], fontsize=14)
+ax.set_ylim(0, 4900); ax.set_yticks([0, 1000, 2000, 3000, 4000]); ax.set_yticklabels(["0", "1,000", "2,000", "3,000", "4,000"], fontsize=13)
+ax.grid(axis="y", color="#E4E6E1", linewidth=1); ax.set_axisbelow(True)
+for s in ["top", "right", "left"]:
+    ax.spines[s].set_visible(False)
+ax.spines["bottom"].set_color("#B9BDB4"); ax.tick_params(length=0)
+ax.set_xlabel("year (CSB 2018–2025 labels)", fontsize=13)
+fig.savefig(OUT / "cane_fields_per_year.png", bbox_inches="tight", pad_inches=0.05, facecolor=SURF)
+plt.close(fig)
+print("cane fields per year:", dict(zip(yrs, n)))
