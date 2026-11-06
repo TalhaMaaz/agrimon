@@ -28,4 +28,5 @@ How it differs from the other places:
 
 | # | Briefing | Date | Covers |
 |---|---|---|---|
+| B02 | [Spike S01, explained line by line](B02_spike_s01_walkthrough.md) | 2026-10-28 | The CSB dataset and its columns, how we got Louisiana, every notebook cell, the statistics, what we found and why it matters |
 | B01 | [The whole picture](B01_the_whole_picture.md) | 2026-10-27 | Why the project exists, the master plan, how we work, everything done so far and why, the knowledge base, what we know, what's next |

@@ -21,6 +21,15 @@ data/
 *.onnx
 *.pkl
 *.pmtiles
+# geodata formats, a second guard in case a file lands outside data/
+*.gpkg
+*.parquet
+*.geoparquet
+*.shp
+*.shx
+*.dbf
+*.gdb/
+*.zip
 
 # Claude Code personal settings
 .claude/settings.local.json
