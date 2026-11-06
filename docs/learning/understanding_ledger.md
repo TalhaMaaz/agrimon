@@ -21,3 +21,7 @@ One row per concept. Result is one of: not yet, shaky, solid. The agent updates 
 | Producer's vs user's accuracy (omission vs commission) | 2026-10-27 | [Catalogue S-US](../research/dataset_catalogue.md) | | not yet | CDL sugarcane: 94 to 97 % / 95 to 96 % |
 | Model-derived labels and circularity | 2026-10-27 | [DATASET_DISCOVERY rubric](../agent/DATASET_DISCOVERY.md), H-24 | | not yet | |
 | Sugarcane as a semi-perennial crop (ratoons) | 2026-10-27 | [Kit audit F-03](../architecture/kit_audit.md) | | not yet | Lesson to come with DQ-21 |
+| Vector vs raster; CRS and equal-area projections | 2026-10-28 | [B02](../briefings/B02_spike_s01_walkthrough.md) | | not yet | Check: why compute areas in Albers, not lon/lat? |
+| Median, percentiles, log-scale histograms | 2026-10-28 | [B02](../briefings/B02_spike_s01_walkthrough.md) section 6 | | not yet | |
+| Zonal statistics and inner buffers | 2026-11-06 | [S02](../research/spikes/S02_cdl_labels.md), [B03](../briefings/B03_why_csb_and_cdl.md) | | not yet | Check: why did purity rise to 1.0 after −30 m? |
+| Why CSB and CDL; agreement is not accuracy | 2026-11-06 | [B03](../briefings/B03_why_csb_and_cdl.md), [guide](../presentation/presentation_guide.md) | | not yet | |

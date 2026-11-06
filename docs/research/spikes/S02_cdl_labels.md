@@ -28,6 +28,8 @@ A CSB field's `CDL2023` value is the majority CDL class inside it. How much of a
 - **Labels agree:** the CSB's `CDL2023` equals our own pixel-majority class for **99.5 %** of fields.
 - **Purity of the 4,213 cane fields (2023):**
 
+
+
   | Measure | Value |
   |---|---|
   | Median cane share | 0.949 |
@@ -35,6 +37,7 @@ A CSB field's `CDL2023` value is the majority CDL class inside it. How much of a
   | 10th percentile | 0.792 |
   | Fields with share ≥ 0.70 | 94.9 % |
   | Fields with share ≥ 0.90 | 71.5 % |
+
 
 - **Edge effect:** after shrinking every field by 30 m (one pixel), 4,034 cane fields remain. Their median share rises from 0.949 to **1.000**, and the share of fields at ≥ 0.70 rises from 94.9 % to 96.8 %.
 - **What the impure pixels are,** for non-cane pixels inside cane fields:

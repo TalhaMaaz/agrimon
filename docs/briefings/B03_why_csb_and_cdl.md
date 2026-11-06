@@ -89,12 +89,12 @@ What S01 also revealed:
 
 ### 4c. S02: the CSB labels against the CDL pixels
 
-| Check (rule set before looking) | Result | Why it mattered |
-|---|---|---|
-| Median "cane" field is ≥ 90 % cane pixels | ✅ 94.9 % | A "majority" label could mean 51 % cane; we needed to know how mixed fields really are |
-| ≥ 90 % of cane fields are at least 70 % cane | ✅ 94.9 % of fields | Few badly mixed fields means the labels are usable as they are |
-| ≥ 80 % of the CDL's cane falls inside CSB fields | ✅ 87.3 % | The polygons must cover most of the crop, or the map would miss cane |
-| Do the two datasets line up? | ✅ same coordinate system; cane pixels sit inside the outlines | Misaligned data would put labels on the wrong fields |
+| Check (rule set before looking)                  | Result                                                        | Why it mattered                                                                        |
+| ------------------------------------------------ | ------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| Median "cane" field is ≥ 90 % cane pixels        | ✅ 94.9 %                                                      | A "majority" label could mean 51 % cane; we needed to know how mixed fields really are |
+| ≥ 90 % of cane fields are at least 70 % cane     | ✅ 94.9 % of fields                                            | Few badly mixed fields means the labels are usable as they are                         |
+| ≥ 80 % of the CDL's cane falls inside CSB fields | ✅ 87.3 %                                                      | The polygons must cover most of the crop, or the map would miss cane                   |
+| Do the two datasets line up?                     | ✅ same coordinate system; cane pixels sit inside the outlines | Misaligned data would put labels on the wrong fields                                   |
 
 What S02 also revealed:
 - **The impurity is at the field edges.** After shrinking every field by one pixel (30 m), the typical cane field is **100 %** cane. So when we read Sentinel-2 values, we shrink each field inward first.
