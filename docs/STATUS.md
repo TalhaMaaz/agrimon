@@ -6,7 +6,7 @@ tags: [status]
 
 # STATUS
 
-Last updated: 2026-10-27 (end of session 3), machine Photon (laptop). Branch `docs/6-kit-audit` (draft PR #27).
+Last updated: 2026-11-06 (end of session 5), machine Photon (laptop). Branch `docs/32-presentation` (stacked on `spike/30-louisiana-data`, PR #31).
 
 ## Current position
 
@@ -20,6 +20,8 @@ Last updated: 2026-10-27 (end of session 3), machine Photon (laptop). Branch `do
 - Kit audit done 2026-10-27 (`architecture/kit_audit.md`): the kit plans bottom-up from one module and one dataset; re-plan from the product spec.
 
 ## Done
+
+- Sessions 4–5 (2026-10-28 to 2026-11-06): spike environment; S01 (CSB, Iberia) and S02 (CDL purity) passed; briefings B02, B03; existing-systems review; requirements register; presentation deck (Artifact N6e6SsWzupuPcMasPJ46eX) and full guide (`presentation/presentation_guide.md`); Stage 2 plan recorded (product spec section 6). See notebook 2026-11-06.
 
 - Sessions 1 and 2 (2026-10-10): kit imported, foundation guide, workflow practice, CI and hook fixes, vision recorded, Dependabot #1 to #5. See the notebook for 2026-10-10.
 - Session 3 (2026-10-27): #23 to #26 merged by the user; kit audit; product spec; DQ-21 to DQ-23 and H-19 to H-24; rubric criterion 11; dataset round 1; CDL sugarcane accuracy recorded (producer's 94.1 to 97.2 %, user's 94.8 to 96.4 %).
@@ -51,5 +53,7 @@ Last updated: 2026-10-27 (end of session 3), machine Photon (laptop). Branch `do
 - NVIDIA driver not working on Photon (`nvidia-smi` fails). Not needed until deep models.
 
 ## Compute and disk
+
+- 2026-11-06: data/raw/csb 3.76 GB zip + 5.4 GB unzipped; data/raw/cdl 2.06 GB zip + 7.9 GB unzipped; interim < 0.2 GB. Conda env 2.3 GB. No fixed budget (user).
 
 - No data downloaded. Project disk use: about 0 GB of the 60 GB budget.

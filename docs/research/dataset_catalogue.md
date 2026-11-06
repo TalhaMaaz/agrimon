@@ -90,7 +90,7 @@ What "ground truth" means here:
 
 ### S-EU: EuroCrops or metropolitan France RPG, status: candidate (not re-checked in round 1)
 
-- Annual declared parcels over many years; no sugarcane; sugar beet is grown and processed by sugar factories, so it is a possible industry analogue. Kept as the cane-free fallback (user, 2026-10-27: a cane-free dataset is acceptable if it covers the modules much better).
+- Checked 2026-11-06: EuroCrops v2 is licensed CC BY 4.0 (`copyright.txt` in the JRC download root) and its file list has France for 2015 to 2023 (9 years). Annual declared parcels; no sugarcane; sugar beet is grown and processed by sugar factories, so it is a possible industry analogue. Kept as the cane-free fallback (user, 2026-10-27: a cane-free dataset is acceptable if it covers the modules much better).
 
 ### Stage 2 lead (not for Stage 1)
 

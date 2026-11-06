@@ -21,6 +21,7 @@ dependencies:
   - pystac-client
   - planetary-computer
   - odc-stac
+  - earthengine-api      # optional extraction backend (noncommercial, university work only)
   # analysis and plots
   - pandas
   - numpy

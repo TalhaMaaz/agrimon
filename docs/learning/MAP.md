@@ -12,10 +12,10 @@ Related: [STATUS](../STATUS.md) | [Briefings](../briefings/README.md) (latest: [
 
 ## 1. Right now (agent updates at /session-end)
 
-- Current phase: Stage 1, Phase R, re-planning from the [product spec](../architecture/product_spec.md) (issue #6)
-- This week's goal: Louisiana data check; roadmap rewrite; content for the intro presentation (about two weeks after 2026-10-27)
-- Waiting for me: review PR #27; close #8; delete merged branches; approve the Louisiana sample download when asked
-- The one concept I must understand this week: producer's vs user's accuracy, and why model-derived labels carry a circularity risk
+- Current phase: Stage 1, Phase R: spikes S01 and S02 done; mid-semester presentation prepared (issue #32)
+- This week's goal: deliver the presentation (deck fixes in the guide's Part 10), then S03 Sentinel-2 and S04 yields
+- Waiting for me: Earth Engine project ID; four PDFs; supervisor feedback and dates for the deck; review and merge PRs
+- The one concept I must understand this week: why 99.5 % CSB/CDL agreement is not proof the labels are right (circularity) — see [the guide](../presentation/presentation_guide.md)
 
 ## 2. The whole system in one picture (a starting hypothesis; the validated version lives in `../architecture/architecture_dossier.md` after Phase R)
 

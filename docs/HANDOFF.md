@@ -6,26 +6,34 @@ tags: [handoff]
 
 # Handoff (overwritten at every /handoff; history is in Git)
 
-Last updated: 2026-10-27, Photon (laptop)
-Branch: `docs/6-kit-audit` (draft PR #27)
-Last commit: see `git log -1` on that branch
+Last updated: 2026-11-06, Photon (laptop)
+Branch: `docs/32-presentation` (contains `spike/30-louisiana-data`)
 
 ## What I was doing and why
-Re-planning Phase R from the end-product interface after auditing the preloaded kit. The user chose the US stack (CSB + CDL), starting with Louisiana. The intro presentation is about two weeks after 2026-10-27.
+Preparing the mid-semester presentation (deck: https://claude.ai/artifact/N6e6SsWzupuPcMasPJ46eX; guide: `docs/presentation/presentation_guide.md`) after spikes S01 and S02 on Louisiana data.
 
 ## State of the work
-- Done: kit audit, product spec, revised DQs/hypotheses, dataset round 1, CDL accuracy table.
-- In progress: PR #27, waiting for the user.
-- Not started: Louisiana data check, literature pass, roadmap rewrite, presentation.
+- Done: spike env, S01, S02, B02, B03, existing-systems review, requirements, diagrams, deck, guide.
+- Pending fixes in the deck: see the guide's Part 10.
+- Not started: S03 Sentinel-2, S04 yields, literature round 2, Checkpoint R.
 
 ## Commands to resume (copy-paste)
 ```
-git switch main && git pull --ff-only && git fetch --prune   # after #27 is merged
-claude   # then /session-start
+cd ~/Documents/University/FYP\ -\ AgriMon/agrimon
+git switch main && git pull --ff-only && git fetch --prune
+~/miniforge3/envs/agrimon-spikes/bin/jupyter lab     # spikes; kernel "Python (agrimon-spikes)"
+claude   # start from INSIDE agrimon/ so the repo agents load; then /session-start
 ```
 
+## Gotchas
+- PROJ/GDAL need `PROJ_DATA`/`GDAL_DATA` unless the env is activated (the kernel sets them).
+- MDPI and ScienceDirect block automated fetches; the user downloads PDFs into `Presentations/`.
+- The national CSB/CDL files live in `data/raw/` (git-ignored, kept).
+
 ## Open decisions and questions for the user
-- Approve the small Louisiana CSB sample download (under 500 MB) when proposed.
+- Earth Engine Cloud project ID (to finish the GEE setup).
+- Four PDFs (Hu 2022, sugarcane review 2021, Punjab 2024, Weiss 2020).
+- Supervisor meetings and feedback, Gantt dates for the deck.
 - DQ-14: cane vs non-cane design (decided with evidence).
 - Code licence (MIT or Apache-2.0), before #7.
 
