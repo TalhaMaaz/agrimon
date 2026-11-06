@@ -42,7 +42,7 @@ rows = {
     "US: CSB + CDL\n(Louisiana)": ["Yes", "Yes", "Yes", "Yes", "Partly", "Yes"],
     "La Réunion\n(RPG)":          ["No", "Yes", "Yes", "No", "No", "Yes"],
     "Brazil-Crop":                ["Yes", "Yes", "No", "No", "No", "Yes"],
-    "EuroCrops /\nFrance":        ["Yes", "No", "Yes", "Yes", "No", "No"],
+    "EuroCrops /\nFrance":        ["Yes", "No", "Yes", "Yes", "No", "Yes"],  # CC BY 4.0 (copyright.txt, checked 2026-11-06)
 }
 style = {"Yes": ("#2E7D32", "#FBFBF8"), "Partly": ("#E3C56B", INK), "No": ("#C8553D", "#FBFBF8"),
          "Not\nverified": ("#E4E6E1", MUTED)}
@@ -164,4 +164,29 @@ a2.spines["left"].set_color("#B9BDB4")
 a2.set_title("All fields in the main cane areas, by 2023 crop", loc="left", fontsize=14, color=INK, pad=8)
 a2.legend(loc="upper center", bbox_to_anchor=(0.42, -0.08), ncol=3, fontsize=11, frameon=False, handlelength=1.2, columnspacing=1.0)
 fig.savefig(OUT / "why_louisiana.png", bbox_inches="tight", pad_inches=0.05, facecolor=SURF)
+plt.close(fig)
+
+# ---- 6. seasons of labelled field data per candidate (spans checked at each source) ----
+cand = [  # (name, years with labels, note)
+    ("US: CSB + CDL", list(range(2008, 2026)), "18 seasons, with sugarcane"),
+    ("EuroCrops / France", list(range(2015, 2024)), "9 seasons, no sugarcane"),
+    ("La Réunion (RPG)", [2019, 2023], "2 seasons confirmed"),
+    ("Brazil-Crop", [2020, 2021], "2 seasons (2020–21)"),
+]
+fig, ax = plt.subplots(figsize=(6.6, 5.2), dpi=200)
+fig.patch.set_facecolor(SURF); ax.set_facecolor(SURF)
+for i, (name, yrs_, note) in enumerate(cand):
+    col = "#2E7D32" if i == 0 else "#8E948A"
+    ax.barh([i] * len(yrs_), [0.86] * len(yrs_), left=[y - 0.43 for y in yrs_], height=0.5, color=col)
+    ax.text(2007.5, i - 0.42, note, ha="left", va="bottom", fontsize=12.5, color=INK if i == 0 else MUTED,
+            fontweight="bold" if i == 0 else "normal")
+ax.set_yticks(range(len(cand))); ax.set_yticklabels([c[0] for c in cand], fontsize=13)
+ax.invert_yaxis(); ax.set_ylim(len(cand) - 0.5, -0.9)
+ax.set_xlim(2007.4, 2025.6); ax.set_xticks([2008, 2012, 2016, 2020, 2025]); ax.tick_params(axis="x", labelsize=13)
+ax.grid(axis="x", color="#E4E6E1", linewidth=1); ax.set_axisbelow(True)
+for s_ in ["top", "right", "left"]:
+    ax.spines[s_].set_visible(False)
+ax.spines["bottom"].set_color("#B9BDB4"); ax.tick_params(length=0)
+ax.set_xlabel("each block = one season with labelled fields", fontsize=12.5)
+fig.savefig(OUT / "seasons_of_labels.png", bbox_inches="tight", pad_inches=0.05, facecolor=SURF)
 plt.close(fig)
