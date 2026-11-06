@@ -75,3 +75,14 @@ What a Stage 1 region must offer for each capability. The dataset search (DQ-01)
 ## 5. Constraint
 
 - The FYP introductory presentation is about two weeks after 2026-10-27. It must say clearly: the plan, the deliverables, what can and cannot be done. The user did not share other dates; don't ask for them.
+
+## 6. Stage 2 plan and why Stage 1 uses US data (user, 2026-11-06)
+
+- **Why US data:** Pakistan has some datasets, but no practical open dataset with **field boundaries**, which the app needs (P-1). The Zenodo record 22806700, for example, has per-field time series with no polygons mentioned (kit audit F-07).
+- **SUPARCO:** contacted by the user for Pakistani field-boundary data. Outcome pending.
+- **If SUPARCO data is available:** Stage 2 builds the Pakistan version on it.
+- **If not, the main contribution is:**
+  1. the complete pipeline built and proven on US data;
+  2. models built for Pakistani conditions, on the Pakistani data that exists;
+  3. if possible, a method to **draw field boundaries in Pakistan** from satellite imagery. This links to DQ-19 and DQ-23; Fields of The World (arXiv 2409.16252) is a candidate starting point, not yet read.
+- Stated on slide 7 of the mid-semester presentation.
