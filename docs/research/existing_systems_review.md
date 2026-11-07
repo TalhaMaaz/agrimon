@@ -99,4 +99,21 @@ What it doesn't claim: better accuracy than these systems (nothing has been meas
 | Hu et al. 2022 | Closest yield work; need its accuracy numbers and spatial level | https://doi.org/10.3390/rs14163870 |
 | Sugarcane remote sensing review, 2021 | Survey for slide 5; authors unconfirmed | https://doi.org/10.3390/rs13204040 |
 | Punjab sugarcane paper, 2024 | Closest Pakistan work; need authors and accuracy | https://www.sciencedirect.com/science/article/pii/S2352938524000892 |
-| Weiss, Jacob, Duveiller 2020 meta-review | Map of the whole field | https://www.sciencedirect.com/science/article/pii/S0034425719304341 |
+| Weiss, Jacob, Duveiller 2020 meta-review (RSE 236:111402) | Map of the whole field | https://doi.org/10.1016/j.rse.2019.111402 (free copy: https://hal.inrae.fr/hal-02627117) |
+
+## 7. Full-text reading, 2026-11-07
+
+The user supplied PDFs in `papers/` (git-ignored). Read in full. Slides 3, 5 and 6 were updated from this.
+
+| Paper | Key facts (from the full text) | Limit for AgriMon |
+|---|---|---|
+| Muqaddas, Qureshi, Jabbar, Munir, Haider 2024, RSASE 35:101225 | Sentinel-2 L2A, 10 dates per pixel, 12 bands + 6 indices; 7 Punjab districts; ground truth = georeferenced NCRA fields, polygons drawn in Google Earth Pro (≈130 acres cane); unmixing only separates crop from soil pixels; LSTM F1 0.90 on an unseen district (Chiniot), ≈0.99 within districts. Intro: mill field agents survey cane with GPS apps ≈2 months before harvest (one co-author from Al-Moiz Industries) | Pixel level; tiny labelled area; lower Punjab and Sindh untested (authors' own limitation) |
+| Hu, Shi, Zha, Zeng 2022, Remote Sens. 14:3870 | MODIS 250 m NDVI/LAI + weather; CDL for cane area; NASS state and county yields 2008–2016; SiPAR best (state Rrmse 5.88 %; Palm Beach Rbias 2.43 %, Rrmse 3.18 %, R² 0.96) | State and county level only |
+| Pelletier, Webb, Petitjean 2019, Remote Sens. 11:523 | TempCNN on 46 Formosat-2 images near Toulouse; OA 93.45 % vs RF 90.92 % (SB-SF); pooling hurts; hand-made indices don't help | Yearly European crops, no sugarcane |
+| Garnot, Landrieu, Giordano, Chehata 2020, CVPR | PSE-TAE: parcel as pixel set + temporal self-attention; 191,703 parcels (LPIS polygons), tile T31TFM, 24 dates of 2017; OA 94.2 %, mIoU 50.9 vs RF 91.6 / 32.5; >4× faster, ≈70 % less memory | One season, French crops, no sugarcane |
+| Rembold et al. 2019, Agric. Syst. 168:247–257 (ASAP) | 1 km MetOp NDVI; z-score of cumulative NDVI vs multi-annual mean per dekad; pixel critical below −1; aggregated to GAUL-1 units; analyst review monthly | Regional, not per field; same z-score logic we plan per field and per cane-cycle stage |
+| Som-ard et al. 2021, Remote Sens. 13:4040 (review) | 107 studies 1981–2020: 52 mapping, 11 growth anomaly, 14 health, 30 yield; obstacles: cloud masks, analysis-ready data, curated ground truth | Survey only |
+| Akhtar 2024 (PIDE Discourse) | Adds: nine cropping zones; crop field layers (incl. sugarcane) used to verify Kissan Package 2015 subsidy claims; names data accessibility as a challenge | Agency-side account |
+| Di Tommaso et al. 2024 | Confirmed: Pakistan threshold borrowed from India; F1 0.6, recall 0.43 (WorldCereal labels); admin-2 R² 0.85 | As in section 3 |
+
+**Correction:** the earlier "labels derived, not surveyed" description of the Punjab paper was wrong; the ground truth is surveyed fields. The Weiss 2020 link in section 6 pointed to a different paper (Rossi et al. 2020, alpine grasslands) and is fixed.
