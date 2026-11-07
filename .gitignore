@@ -48,3 +48,6 @@ docs/.obsidian/plugins/*/data.json
 docs/thesis/build/
 node_modules/
 apps/web/dist/
+
+# Paper PDFs (publisher copyright; keep local only)
+papers/
