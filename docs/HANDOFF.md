@@ -6,15 +6,16 @@ tags: [handoff]
 
 # Handoff (overwritten at every /handoff; history is in Git)
 
-Last updated: 2026-11-06, Photon (laptop)
-Branch: `docs/32-presentation` (contains `spike/30-louisiana-data`)
+Last updated: 2026-11-10, laptop
+Branch: `docs/presentation-final-touches`
 
 ## What I was doing and why
-Preparing the mid-semester presentation (deck: https://claude.ai/artifact/N6e6SsWzupuPcMasPJ46eX; guide: `docs/presentation/presentation_guide.md`) after spikes S01 and S02 on Louisiana data.
+Finishing the mid-semester presentation. Designed deck (16 slides): https://claude.ai/artifact/N6e6SsWzupuPcMasPJ46eX. Plain black-and-white copy: https://claude.ai/artifact/KnVFM1Q13BiS3nwUiY3WfB. Details in `docs/lab_notebook/2026-11-10.md`.
 
 ## State of the work
-- Done: spike env, S01, S02, B02, B03, existing-systems review, requirements, diagrams, deck, guide.
-- Pending fixes in the deck: see the guide's Part 10.
+- Done: spike env, S01, S02, B02, B03, existing-systems review, requirements, deck (with use-case diagram and ERD), plain copy.
+- Next: Talha sends their own presenter-notes document; review it against the slides, sources and the 10-minute limit (do not edit deck notes until then).
+- Pending doc updates: see the open list in the 2026-11-10 notebook entry.
 - Not started: S03 Sentinel-2, S04 yields, literature round 2, Checkpoint R.
 
 ## Commands to resume (copy-paste)
