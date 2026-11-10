@@ -10,11 +10,13 @@ Last updated: 2026-11-10, laptop
 Branch: `docs/presentation-final-touches`
 
 ## What I was doing and why
-Finishing the mid-semester presentation. Designed deck (16 slides): https://claude.ai/artifact/N6e6SsWzupuPcMasPJ46eX. Plain black-and-white copy: https://claude.ai/artifact/KnVFM1Q13BiS3nwUiY3WfB. Details in `docs/lab_notebook/2026-11-10.md`.
+Finishing the mid-semester presentation. Designed deck (16 slides, version 373): https://claude.ai/artifact/N6e6SsWzupuPcMasPJ46eX. Speaker notes: `docs/presentation/speaker_notes.md`; cue cards: `docs/presentation/cue_cards.html`. Plain black-and-white copy (out of date): https://claude.ai/artifact/KnVFM1Q13BiS3nwUiY3WfB. Details in `docs/lab_notebook/2026-11-10.md`.
 
 ## State of the work
 - Done: spike env, S01, S02, B02, B03, existing-systems review, requirements, deck (with use-case diagram and ERD), plain copy.
-- Next: Talha sends their own presenter-notes document; review it against the slides, sources and the 10-minute limit (do not edit deck notes until then).
+- Speaker notes reviewed and corrected for terminology (2026-11-10); deck sizing checked against Talha's PDF export.
+- Next: rehearse against the 10-minute limit; confirm 8 lakh acres includes JDW's 4.5 lakh; check "130 acres" in the Punjab paper; decide whether to update or drop the plain deck.
+- SRS draft is on branch `docs/srs-draft` (`docs/requirements/SRS.md` v0.2 and the Word copy), pushed, no PR yet.
 - Pending doc updates: see the open list in the 2026-11-10 notebook entry.
 - Not started: S03 Sentinel-2, S04 yields, literature round 2, Checkpoint R.
 
