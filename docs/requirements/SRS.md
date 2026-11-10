@@ -11,7 +11,7 @@ Satellite and AI-Based Crop Monitoring and Decision-Support System for Sugarcane
 
 | Item | Detail |
 |---|---|
-| Version | 0.1 (draft) |
+| Version | 0.2 (draft) |
 | Date | 2026-11-10 |
 | Author | Muhammad Talha Maaz (student), drafted with Claude Code |
 | Supervisor | Dr. Aneela Zameer, DCIS |
@@ -26,7 +26,7 @@ Satellite and AI-Based Crop Monitoring and Decision-Support System for Sugarcane
 4. System features (use cases and functional requirements)
 5. Non-functional requirements
 6. Data requirements
-7. Stage 2: adaptation to Pakistan
+7. Stage 2: the Pakistan system
 8. Verification and traceability
 9. Open issues
 
@@ -46,10 +46,12 @@ AgriMon is a web-map application that shows, for each field in a study area:
 - how healthy it is compared with the expected growth curve for its stage in the cane cycle,
 - an indicative yield, or a documented reason why yield cannot be estimated at field level.
 
-It is built from free satellite imagery (Sentinel-2) and open field and crop data. The work has two stages:
+It is built from free satellite imagery (Sentinel-2) and open field and crop data. The target system is for Pakistan. The work has two stages:
 
-- **Stage 1 (main build):** Louisiana, USA (Iberia parish), where open field boundaries and sugarcane labels exist.
-- **Stage 2 (end of the FYP):** adapt the pipeline to Pakistan with the data that is available (section 7).
+- **Stage 1 (pipeline practice):** build and prove the complete pipeline on Louisiana, USA (Iberia parish), where open field boundaries and sugarcane labels exist. Stage 1 is a proving ground: it tests the methods and the engineering on data good enough to check them, before they are applied where data is scarce.
+- **Stage 2 (the real build):** build the Pakistan system, as far as the available Pakistani data allows (section 7).
+
+Requirements in sections 3 to 6 apply to the system in both stages; their acceptance tests run first on Louisiana, where ground data exists to check them.
 
 AgriMon is a prototype for a final-year project. It is not a commercial product, it has no user accounts, and it does not diagnose pests or diseases.
 
@@ -331,9 +333,11 @@ Entity-relationship diagram (slide 11 of the deck; crow's foot in the slide, tex
 
 ---
 
-## 7. Stage 2: adaptation to Pakistan
+## 7. Stage 2: the Pakistan system
 
-**What stays the same:** the pipeline, the per-field feature store, the models' interfaces and the web map. R-F-10 (new region by configuration) is the requirement that makes this possible.
+Stage 2 is the real build: the system for Pakistani sugarcane. Stage 1 exists so that this stage starts from a pipeline that is already proven and tested.
+
+**What carries over from Stage 1:** the pipeline, the per-field feature store, the models' interfaces and the web map. R-F-10 (new region by configuration) is the requirement that makes this possible.
 
 **What changes, and what is unknown:**
 
@@ -347,9 +351,10 @@ Entity-relationship diagram (slide 11 of the deck; crow's foot in the slide, tex
 
 **Stage 2 requirements (proposed, to be refined when the data is known):**
 
-- R-F-S2-01. Run the pipeline on a Pakistani study area using the same configuration mechanism (should).
+- R-F-S2-01. Run the pipeline on a Pakistani study area using the same configuration mechanism (must).
 - R-F-S2-02. If no field boundaries are available, produce field polygons from satellite images for a test area and report their quality (could).
-- R-F-S2-03. Report how the Stage 1 models perform on Pakistani data, and what retraining was needed (should).
+- R-F-S2-03. Report how the Stage 1 models perform on Pakistani data, and what retraining was needed (must).
+- R-F-S2-04. Show the Pakistani study area on the web map with every layer the available data supports, and state plainly which layers are missing and why (must).
 
 ---
 
@@ -364,6 +369,7 @@ Verification methods: T = test, E = experiment, D = demo, R = review.
 | O3 Health | R-F-04 to R-F-07 | UC-05 | E, D |
 | O4 Yield | R-F-08 | UC-06 | E, R |
 | O5 Web map | R-F-01, R-F-06, R-F-09, R-N-05, R-N-09 | UC-01 to UC-03 | D, T |
+| Stage 2 Pakistan system | R-F-S2-01 to R-F-S2-04, R-F-10 | UC-01 to UC-08 on Pakistani data | D, E |
 | All | R-N-07, R-N-08, R-N-10 | | R, T |
 
 ---
@@ -388,3 +394,4 @@ Verification methods: T = test, E = experiment, D = demo, R = review.
 | Version | Date | Change |
 |---|---|---|
 | 0.1 | 2026-11-10 | First draft from the requirements register, product spec and mid-semester deck |
+| 0.2 | 2026-11-10 | Reframed: Louisiana is pipeline practice (Stage 1); Pakistan is the real build (Stage 2). Stage 2 requirements raised to must where the data allows; R-F-S2-04 added |
