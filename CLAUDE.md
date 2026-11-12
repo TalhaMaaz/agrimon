@@ -43,7 +43,7 @@ Talha, final-year CS student, Ubuntu, Python and JavaScript. Knows basic ML and 
 
 ## Tools in this repo
 
-Commands: /handoff, /session-start, /lit-review, /phase-brief, /session-end, /weekly-review, /teach-back, /viva-drill, /open-pr. Subagents (read-only): reviewer, dataset-scout, examiner. Hooks in `.claude/hooks/` block pushes to `main`, merges, force pushes, commits of data or secrets, and run ruff after Python edits. Permissions live in `.claude/settings.json`.
+Commands and subagents: none for now (kit v1's were removed on 2026-11-12 and will be redesigned; restore any with `git checkout kit-v1 -- .claude/<path>`). Hooks in `.claude/hooks/` block pushes to `main`, merges, force pushes, commits of data or secrets, and run ruff after Python edits. Permissions live in `.claude/settings.json`.
 
 ## Notes for Obsidian
 
