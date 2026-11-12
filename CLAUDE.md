@@ -38,7 +38,7 @@ Talha, final-year CS student, Ubuntu, Python and JavaScript. Knows basic ML and 
 9. Never cache whole scenes; stream and keep per-parcel features. No fixed disk budget (user, 2026-10-27: plenty of space; keep downloaded datasets, log disk use in STATUS). Long jobs are chunked, resumable and logged.
 10. Record each dataset's licence before use. Never commit data, rasters, weights, credentials or `.env`.
 11. Stop and ask when scope, cost or the thesis story changes, or a network call is blocked. Do not work around blocks.
-12. Git: issue, branch, Conventional Commits, draft PR, green CI. Never push to `main`, never merge. The user reviews and merges. The user does not want "you try first" exercises: Claude Code is the primary developer, the user must still be able to explain everything. Announce and log every repository-settings change. See `GITHUB_WORKFLOW.md`.
+12. Git (kit v2, 2026-11-12): one branch per milestone (`build/<milestone>`), small Conventional Commits pushed often, one draft PR per finished milestone with green CI. Issues only for real bugs or work the user wants listed, never per small edit. PRs merge with a merge commit (no squash) so commit hashes stay traceable. Never push to `main`, never merge. The user reviews and merges. The user does not want "you try first" exercises: Claude Code is the primary developer, the user must still be able to explain everything. Announce and log every repository-settings change. See `GITHUB_WORKFLOW.md`.
 13. If the user cannot explain a part of the system, that part is not finished.
 
 ## Tools in this repo
