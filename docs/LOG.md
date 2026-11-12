@@ -36,3 +36,7 @@ Claude's running log of the project, newest entry at the bottom. Each entry: wha
 - **Problems:** the first push of `chore/kit-v2` was refused (token lacked the `workflow` scope); the user re-authenticated and it went through. Merging PR #35 was then blocked: an older GitHub ruleset `protect-main` (from kit v1's bootstrap script) required linear history, which forbids merge commits. Fixed by removing that one rule and limiting the ruleset to merge commits; the ruleset still blocks deletion and force pushes, and requires a PR and a passing `ci` check. The classic branch protection added earlier today duplicated the ruleset and was removed.
 - **Decision (user), after the merge of PR #35:** learning is entirely the user's responsibility. No lessons, reminders or milestone pointers; teach only when asked. CLAUDE.md rule 11 rewritten (branch `chore/kit-v2-rules`).
 - **Next (written before the merge):** user merges PR #35. Then decide the new kit's commands and helpers, the build timeline (layers 1 + 2 or 1 + 2 + 3) and the milestone pointer; then Stage 1 preprocessing.
+
+## 2026-11-12 · v1/v2 split tried and undone
+
+- Tried splitting into a frozen `agrimon-v1` (tag `kit-v1`) and a fresh `agrimon-v2` repo, and moved `data/` and `papers/` into v2. **Decision (user):** undo it and keep working in this single `agrimon` repo. `data/` (19 GB) and `papers/` moved back. Kit v1 stays available at git tag `kit-v1` (on GitHub) and in `docs/archive/kit-v1/`.
