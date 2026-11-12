@@ -37,7 +37,7 @@ Talha, final-year CS student, Ubuntu, Python and JavaScript, basic ML. New to re
 8. Record each dataset's licence before use. Never commit data, rasters, weights, credentials or `.env`.
 9. Stop and ask when scope, cost or the thesis story changes, or when a network call is blocked. Do not work around blocks.
 10. Git: one branch per milestone (`build/<milestone>`), small Conventional Commits pushed often, one draft PR per finished milestone with green CI. Issues only for real bugs or work the user wants listed. PRs merge with a merge commit (no squash) so commit hashes stay traceable. Never push to `main`, never merge: the user reviews and merges. Announce every repository-settings change.
-11. If the user cannot explain a part of the system, that part is not finished.
+11. Learning is the user's responsibility (user, 2026-11-12). Never add lessons, quizzes, reminders or "you may want to learn X" pointers. Explain or teach only when asked. Keep code comments and the LOG clear enough that anything built can be understood later.
 
 ## Repo map
 
