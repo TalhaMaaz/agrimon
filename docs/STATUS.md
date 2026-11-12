@@ -11,7 +11,7 @@ Last updated: 2026-11-06 (end of session 5), machine Photon (laptop). Branch `do
 ## Current position
 
 - Stage 1, step R (Research and architecture), issue #6. Re-planning after the kit audit.
-- Re-plan step 1 done: [kit audit](architecture/kit_audit.md), [product spec](architecture/product_spec.md), revised design questions and hypotheses.
+- Re-plan step 1 done: [kit audit](archive/kit-v1/kit_audit.md), [product spec](design/product_spec.md), revised design questions and hypotheses.
 - Re-plan step 2 started: dataset round 1 ([catalogue](research/dataset_catalogue.md)). **User decision 2026-10-27: US stack (USDA CSB boundaries + CDL labels), starting with Louisiana.** ADR at Checkpoint R.
 
 ## Near-term goal

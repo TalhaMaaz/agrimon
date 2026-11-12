@@ -7,7 +7,7 @@ phase: R
 
 # Dataset catalogue
 
-Candidates for the Stage 1 region, scored against the [product spec](../architecture/product_spec.md) section 4 (capabilities P-1 to P-4) and the rubric in `docs/agent/DATASET_DISCOVERY.md` section 4 (criterion 11, module and demo coverage, is weighted double). A candidate may be a **stack**: several sources over one region. Only facts checked at the source are written as facts; everything else is marked *unverified*.
+Candidates for the Stage 1 region, scored against the [product spec](../design/product_spec.md) section 4 (capabilities P-1 to P-4) and the rubric in `docs/archive/kit-v1/agent/DATASET_DISCOVERY.md` section 4 (criterion 11, module and demo coverage, is weighted double). A candidate may be a **stack**: several sources over one region. Only facts checked at the source are written as facts; everything else is marked *unverified*.
 
 Round 1: 2026-10-27, search log rows R1-01 to R1-08. Status values: candidate, verified, adopted, rejected.
 

@@ -2,7 +2,7 @@
 
 This kit sets up Claude Code to build your FYP (classification, health monitoring, optional yield prediction) in one repository, with no rigid schedule, to teach you along the way, and to run the repository like a professional software team.
 
-Vision (added 2026-10-10): Stage 1 builds the full application on a country with good open data; Stage 2, at the end of the FYP, adapts Pakistani datasets. The aim is to learn the standards for building such a system end to end. See `docs/agent/PROJECT_CONTEXT.md` section 1a and `docs/playbook/`.
+Vision (added 2026-10-10): Stage 1 builds the full application on a country with good open data; Stage 2, at the end of the FYP, adapts Pakistani datasets. The aim is to learn the standards for building such a system end to end. See `docs/archive/kit-v1/agent/PROJECT_CONTEXT.md` section 1a and `docs/research/`.
 
 ## What is in the kit
 
@@ -20,8 +20,8 @@ scripts/bootstrap_github.sh        labels, milestones, main-branch ruleset, seed
   commands/                        /handoff /lit-review /session-start /phase-brief /session-end /weekly-review /teach-back /viva-drill /open-pr
   agents/                          reviewer, dataset-scout, examiner (read-only subagents)
 docs/learning/                      MAP.md, MAP.canvas, WEEKLY_RHYTHM.md, OBSIDIAN_GUIDE.md, understanding_ledger.md
-docs/_templates/  docs/.obsidian/     note templates and starter Obsidian config
-docs/agent/
+docs/archive/kit-v1/templates/  docs/.obsidian/     note templates and starter Obsidian config
+docs/archive/kit-v1/agent/
   PROJECT_CONTEXT.md               long background formerly in CLAUDE.md
   MULTI_MACHINE.md                 laptop, lab PC, cloud: how to keep sessions in sync
   TEACHING_PROTOCOL.md             how the agent teaches you, incl. plain-language maths
@@ -45,7 +45,7 @@ Follow `SETUP_GUIDE.md` (Part 1 explains how Claude Code, Git, GitHub and Obsidi
 
 ## First message to paste
 
-> Read CLAUDE.md and every file in docs/agent/. Treat the architecture in the kit as hypotheses. Start with Phase R: give me a Phase R Brief (design questions, research plan, first papers to read, assumptions, clarifying questions). State your assumptions first, ask me clarifying questions, and do not write code until I approve. I have no maths background and have read no papers, so teach me in plain words and start with the reading list.
+> Read CLAUDE.md and every file in docs/archive/kit-v1/agent/. Treat the architecture in the kit as hypotheses. Start with Phase R: give me a Phase R Brief (design questions, research plan, first papers to read, assumptions, clarifying questions). State your assumptions first, ask me clarifying questions, and do not write code until I approve. I have no maths background and have read no papers, so teach me in plain words and start with the reading list.
 
 ## Decisions recorded so far (Oct 2026)
 
@@ -62,7 +62,7 @@ Module B important, Module C not (feasibility note only). Demo: replay on old fi
 
 ## Obsidian (your learning cockpit)
 
-Open the `docs/` folder as an Obsidian vault and read `docs/learning/OBSIDIAN_GUIDE.md`. Start every day at `docs/learning/MAP.md`; the visual map is `MAP.canvas`; the weekly structure is `WEEKLY_RHYTHM.md`. A starter `docs/.obsidian/` config is included (untested in Obsidian; check Settings, Files and links, and make sure "Use [[Wikilinks]]" is off). `.gitignore` keeps device-specific Obsidian state out of Git.
+Open the `docs/` folder as an Obsidian vault and read `docs/archive/kit-v1/learning/OBSIDIAN_GUIDE.md`. Start every day at `docs/archive/kit-v1/learning/MAP.md`; the visual map is `MAP.canvas`; the weekly structure is `WEEKLY_RHYTHM.md`. A starter `docs/.obsidian/` config is included (untested in Obsidian; check Settings, Files and links, and make sure "Use [[Wikilinks]]" is off). `.gitignore` keeps device-specific Obsidian state out of Git.
 
 ## Claude Code features in this kit
 

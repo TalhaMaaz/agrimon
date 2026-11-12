@@ -17,6 +17,6 @@ Files from the original project kit that the solo workflow (kit v2, 2026-11-12) 
 | `SECURITY.md` | repo root | Vulnerability reporting policy |
 | `devcontainer/devcontainer.json` | `.devcontainer/` | GitHub Codespaces environment recipe (never used) |
 
-Older notes (for example `docs/learning/foundation/F1_big_picture.md` and `docs/briefings/B01_the_whole_picture.md`) still mention these files at their original locations; this table is where to find them now.
+Older notes (for example `docs/learning/foundation/F1_big_picture.md` and `docs/learning/briefings/B01_the_whole_picture.md`) still mention these files at their original locations; this table is where to find them now.
 
 Also removed in kit v2, recoverable from tag `kit-v1`: the nine slash commands and three subagents in `.claude/`, and the extra GitHub workflows, Dependabot, CODEOWNERS, issue templates and `scripts/bootstrap_github.sh`.

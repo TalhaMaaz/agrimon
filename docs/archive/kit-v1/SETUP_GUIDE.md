@@ -36,7 +36,7 @@ What the kit's files do:
 | File or folder | What it does | When it matters |
 |---|---|---|
 | `CLAUDE.md` | Short always-on rules Claude Code reads every session | Every session |
-| `docs/agent/*.md` | Detailed protocols (teaching, research, GitHub, modules) Claude reads when needed | Claude reads them; you rarely need to |
+| `docs/archive/kit-v1/agent/*.md` | Detailed protocols (teaching, research, GitHub, modules) Claude reads when needed | Claude reads them; you rarely need to |
 | `.claude/commands/` | Slash commands you type: `/session-start`, `/lit-review`, `/phase-brief`, ... | Daily |
 | `.claude/agents/` | Specialist helpers (reviewer, dataset-scout, examiner) Claude can call | Claude uses them |
 | `.claude/hooks/` + `settings.json` | Safety guards: stop pushes to `main`, merges, commits of data or secrets | Automatic |
@@ -167,7 +167,7 @@ First time: it opens a browser to log in with your Claude Pro account, and asks 
 3. Type `/permissions` to see what is allowed, asked, or denied. Do not use any "skip permissions" mode; it would defeat the safety rules.
 4. Paste the first message from `START_HERE.md`:
 
-> Read CLAUDE.md and every file in docs/agent/. Treat the architecture in the kit as hypotheses. Start with Phase R: give me a Phase R Brief (design questions, research plan, first papers to read, assumptions, clarifying questions).
+> Read CLAUDE.md and every file in docs/archive/kit-v1/agent/. Treat the architecture in the kit as hypotheses. Start with Phase R: give me a Phase R Brief (design questions, research plan, first papers to read, assumptions, clarifying questions).
 
 Claude should answer with assumptions first and questions for you. Answer them. It will wait for your "go" before doing the work.
 
@@ -206,7 +206,7 @@ Using Claude Pro well: Pro has usage limits (I did not verify the current number
 
 ## Part 3b: Working on two machines (laptop now, lab PC later)
 
-Claude Code sessions do not sync between computers: a conversation is saved only on the machine where it ran. The fix is that the repository is the shared memory. Before leaving a machine run `/handoff`; on the other machine run `git fetch --all --prune`, `git switch <branch>`, `git pull --ff-only`, rebuild the environment from the lockfile, start `claude`, and run `/session-start`. Full details, what travels and what does not, and the options for the lab PC are in `docs/agent/MULTI_MACHINE.md`.
+Claude Code sessions do not sync between computers: a conversation is saved only on the machine where it ran. The fix is that the repository is the shared memory. Before leaving a machine run `/handoff`; on the other machine run `git fetch --all --prune`, `git switch <branch>`, `git pull --ff-only`, rebuild the environment from the lockfile, start `claude`, and run `/session-start`. Full details, what travels and what does not, and the options for the lab PC are in `docs/archive/kit-v1/agent/MULTI_MACHINE.md`.
 
 ## Part 4: Troubleshooting
 

@@ -10,4 +10,4 @@ This is a solo final-year project that follows a professional workflow on purpos
 6. Never commit data, rasters, model weights, credentials or `.env` files.
 7. Update the lab notebook, `docs/STATUS.md` and any affected ADR in the same PR.
 
-Setup and commands are in `README.md`. The full process is in `docs/agent/GITHUB_WORKFLOW.md`.
+Setup and commands are in `README.md`. The full process is in `docs/archive/kit-v1/agent/GITHUB_WORKFLOW.md`.

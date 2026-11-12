@@ -1,13 +1,13 @@
 # AGRIMON: Crop Intelligence Platform (working name)
 
-Always-on rules only. Long background is in `docs/agent/PROJECT_CONTEXT.md`; protocols are in `docs/agent/`.
+Always-on rules only. Long background is in `docs/archive/kit-v1/agent/PROJECT_CONTEXT.md`; protocols are in `docs/archive/kit-v1/agent/`.
 
 ## Project
 
 Solo final-year project (one repo; thesis plus viva covering everything). Two stages, both inside the FYP:
 - **Stage 1 (now, the only focus):** build the full application on a country whose open data meets our needs (proper field polygons, crop labels, ideally sugarcane), chosen by a dataset search in Phase R. Proves the pipeline and teaches the standards of the work.
 - **Stage 2 (end of the FYP):** adapt the available Pakistani datasets and build the system that is possible for Pakistan today.
-Why (user, 2026-10-10): beyond grades, the FYP exists to equip Talha with the skills and standards to build this kind of system end to end, from data collection to a shipped product. So every phase also records researched best practice that transfers to Pakistan (`docs/playbook/`). No rigid schedule: see `ROADMAP.md`. A prototype built from open data only: no ground truth of our own, no research questions. Requirements and design studies govern the work.
+Why (user, 2026-10-10): beyond grades, the FYP exists to equip Talha with the skills and standards to build this kind of system end to end, from data collection to a shipped product. So every phase also records researched best practice that transfers to Pakistan (`docs/research/`). No rigid schedule: see `ROADMAP.md`. A prototype built from open data only: no ground truth of our own, no research questions. Requirements and design studies govern the work.
 - Module A: crop classification of field parcels from Sentinel-2 time series, shown on a web map. First deliverable.
 - Module B: near-real-time crop health monitoring (uses A). IMPORTANT to the user; also drives the present-day demo.
 - Module C: yield prediction. NOT important; default is a short feasibility note (`MODULE_C_YIELD.md`).
@@ -20,11 +20,11 @@ Talha, final-year CS student, Ubuntu, Python and JavaScript. Knows basic ML and 
 
 ## Read at session start (or run /session-start)
 
-`docs/STATUS.md`, the latest `docs/lab_notebook/` entry, `docs/HANDOFF.md`, `docs/agent/TEACHING_PROTOCOL.md`. Read at the start of Phase R: `RESEARCH_AND_ARCHITECTURE.md`. Read on demand: `DOCUMENTATION_PROTOCOL.md`, `ROADMAP.md`, `DATASET_DISCOVERY.md`, `READING_LIST.md`, `PLATFORM_AND_COMPUTE.md`, `GITHUB_WORKFLOW.md`, and only the current module file (`MODULE_A_CLASSIFICATION.md`, `MODULE_B_HEALTH.md`, `MODULE_C_YIELD.md`).
+`docs/STATUS.md`, the latest `docs/archive/kit-v1/lab_notebook/` entry, `docs/archive/kit-v1/HANDOFF.md`, `docs/archive/kit-v1/agent/TEACHING_PROTOCOL.md`. Read at the start of Phase R: `RESEARCH_AND_ARCHITECTURE.md`. Read on demand: `DOCUMENTATION_PROTOCOL.md`, `ROADMAP.md`, `DATASET_DISCOVERY.md`, `READING_LIST.md`, `PLATFORM_AND_COMPUTE.md`, `GITHUB_WORKFLOW.md`, and only the current module file (`MODULE_A_CLASSIFICATION.md`, `MODULE_B_HEALTH.md`, `MODULE_C_YIELD.md`).
 
 ## Rules
 
-00. The repository is the memory. Chats and auto memory are machine-local and disposable; anything a future session or another machine must know goes into repo files (STATUS, HANDOFF, notebook, ADRs). See `docs/agent/MULTI_MACHINE.md`.
+00. The repository is the memory. Chats and auto memory are machine-local and disposable; anything a future session or another machine must know goes into repo files (STATUS, HANDOFF, notebook, ADRs). See `docs/archive/kit-v1/agent/MULTI_MACHINE.md`.
 0. Everything in this kit about architecture, tools, models, class lists and layout is a STARTING HYPOTHESIS, not a decision. Before building, run Phase R (`RESEARCH_AND_ARCHITECTURE.md`): research, read papers, make notes, validate or replace the hypotheses, and get the architecture dossier approved. Every design choice needs evidence the user can present in the defence.
 
 1. Teach as you go: short lesson before a new concept, walkthrough after code, plain words then maths (worked example, formula, code), one concept at a time.
@@ -47,7 +47,7 @@ Commands and subagents: none for now (kit v1's were removed on 2026-11-12 and wi
 
 ## Notes for Obsidian
 
-`docs/` is the user's Obsidian vault. Every note you write there starts with YAML frontmatter (`type`, `status`, `tags`; `module` and `phase` where relevant), uses standard relative Markdown links (no wikilinks), and ASCII diagrams. Never write in `docs/learning/my_understanding/`. Keep `docs/learning/MAP.md` ("Right now" section, next paper) current at /session-end and /weekly-review. See `docs/learning/OBSIDIAN_GUIDE.md`.
+`docs/` is the user's Obsidian vault. Every note you write there starts with YAML frontmatter (`type`, `status`, `tags`; `module` and `phase` where relevant), uses standard relative Markdown links (no wikilinks), and ASCII diagrams. Never write in `docs/learning/my_understanding/`. Keep `docs/archive/kit-v1/learning/MAP.md` ("Right now" section, next paper) current at /session-end and /weekly-review. See `docs/archive/kit-v1/learning/OBSIDIAN_GUIDE.md`.
 
 ## Style
 

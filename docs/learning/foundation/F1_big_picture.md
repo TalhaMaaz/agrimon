@@ -57,8 +57,8 @@ The kit is a set of files someone (a previous Claude conversation, with you) pre
  LAYER 1: instructions for Claude            LAYER 2: automation and guard rails         LAYER 3: for you (human-facing)
  ------------------------------              -----------------------------------         ------------------------------
  CLAUDE.md          (always loaded)          .claude/settings.json (permissions)          START_HERE.md, SETUP_GUIDE.md
- docs/agent/*.md    (read on demand)         .claude/hooks/*.py    (safety checks)        docs/learning/ (MAP, lessons, ledger)
- .claude/commands/  (your slash commands)    .github/ (CI, Dependabot, forms, rules)      docs/_templates/ (note templates)
+ docs/archive/kit-v1/agent/*.md    (read on demand)         .claude/hooks/*.py    (safety checks)        docs/learning/ (MAP, lessons, ledger)
+ .claude/commands/  (your slash commands)    .github/ (CI, Dependabot, forms, rules)      docs/archive/kit-v1/templates/ (note templates)
  .claude/agents/    (helper subagents)       scripts/bootstrap_github.sh (one-off setup)  CONTRIBUTING, SECURITY, CODE_OF_CONDUCT
 ```
 

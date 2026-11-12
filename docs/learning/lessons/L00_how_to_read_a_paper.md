@@ -7,7 +7,7 @@ phase: R
 
 # L00: How to read a research paper
 
-Format: in-flow lesson (TEACHING_PROTOCOL 3.1). Needed before the first paper in [the reading list](../../agent/READING_LIST.md).
+Format: in-flow lesson (TEACHING_PROTOCOL 3.1). Needed before the first paper in [the reading list](../../archive/kit-v1/agent/READING_LIST.md).
 
 ## What is a research paper?
 
@@ -73,7 +73,7 @@ After each paper, write five lines in your own words in `docs/learning/my_unders
 5. Limits:   what it does not show, or where it might not hold
 ```
 
-My fuller note goes in `docs/research/papers/` (template `docs/_templates/paper-note.md`), together with the equations explained and the design decision the paper affects.
+My fuller note goes in `docs/research/papers/` (template `docs/archive/kit-v1/templates/paper-note.md`), together with the equations explained and the design decision the paper affects.
 
 ## Check yourself
 

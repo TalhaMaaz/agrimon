@@ -1,6 +1,6 @@
 # Exploration notebooks (Phase R spikes)
 
-Throwaway code for Phase R step 5 (`docs/agent/RESEARCH_AND_ARCHITECTURE.md`): small experiments that answer one design question each. Anything reusable is rewritten properly in the real package after Checkpoint R.
+Throwaway code for Phase R step 5 (`docs/archive/kit-v1/agent/RESEARCH_AND_ARCHITECTURE.md`): small experiments that answer one design question each. Anything reusable is rewritten properly in the real package after Checkpoint R.
 
 - Environment: `environment-spikes.yml` (exact versions in `environment-spikes.lock.txt`).
   Create with `~/miniforge3/bin/mamba env create -f environment-spikes.yml`, open with
