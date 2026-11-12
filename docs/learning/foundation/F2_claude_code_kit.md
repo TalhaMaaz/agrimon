@@ -25,16 +25,16 @@ Claude Code is an agent that runs in your terminal inside the project folder. It
 
 ## 1. CLAUDE.md: the always-on rules
 
-Claude Code reads `CLAUDE.md` into context at the start of every session. Analogy: it's the **system config every process loads at boot**. Because it costs context on every turn, it's kept short (rules and pointers only). The long protocols sit in `docs/agent/` and are read **on demand**, like lazy-loaded modules: CLAUDE.md says "read `GITHUB_WORKFLOW.md` for any git action", and Claude opens it when needed.
+Claude Code reads `CLAUDE.md` into context at the start of every session. Analogy: it's the **system config every process loads at boot**. Because it costs context on every turn, it's kept short (rules and pointers only). The long protocols sit in `docs/archive/kit-v1/agent/` and are read **on demand**, like lazy-loaded modules: CLAUDE.md says "read `GITHUB_WORKFLOW.md` for any git action", and Claude opens it when needed.
 
 ```
- CLAUDE.md (always)  ---> points to --->  docs/agent/TEACHING_PROTOCOL.md   (every session)
-                                          docs/agent/RESEARCH_AND_ARCHITECTURE.md (Phase R)
-                                          docs/agent/GITHUB_WORKFLOW.md     (git work)
-                                          docs/agent/MODULE_A_...md          (only the current module)
+ CLAUDE.md (always)  ---> points to --->  docs/archive/kit-v1/agent/TEACHING_PROTOCOL.md   (every session)
+                                          docs/archive/kit-v1/agent/RESEARCH_AND_ARCHITECTURE.md (Phase R)
+                                          docs/archive/kit-v1/agent/GITHUB_WORKFLOW.md     (git work)
+                                          docs/archive/kit-v1/agent/MODULE_A_...md          (only the current module)
 ```
 
-The files in `docs/agent/`, and what each one governs:
+The files in `docs/archive/kit-v1/agent/`, and what each one governs:
 
 | File | Governs |
 |---|---|
@@ -128,12 +128,12 @@ Limit worth knowing: hooks only guard **Claude's** actions. Commands you type in
 
 ## What goes wrong?
 
-- A long CLAUDE.md wastes context in every session. Keep rules there and detail in `docs/agent/`.
+- A long CLAUDE.md wastes context in every session. Keep rules there and detail in `docs/archive/kit-v1/agent/`.
 - Approving permission prompts without reading them defeats the "ask" list.
 - Editing `.claude/settings.json` changes the guard rails for every machine. That's a reviewable change, so it goes through a PR.
 
 ## Check yourself
 
-1. What is the difference between `CLAUDE.md` and `docs/agent/GITHUB_WORKFLOW.md` in when they're loaded, and why is it split that way?
+1. What is the difference between `CLAUDE.md` and `docs/archive/kit-v1/agent/GITHUB_WORKFLOW.md` in when they're loaded, and why is it split that way?
 2. Claude tries `git push origin main`. Which two mechanisms stop it?
 3. Why are the subagents read-only, and why might the reviewer find bugs that the main session missed?

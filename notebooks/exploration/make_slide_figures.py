@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
 
 ROOT = Path(sys.argv[1])
-OUT = ROOT / "docs/presentation/figures"
+OUT = ROOT / "docs/presentations/figures"
 OUT.mkdir(parents=True, exist_ok=True)
 INK, MUTED, SURF = "#14261C", "#3D4A42", "#FBFBF8"
 plt.rcParams.update({"font.family": "DejaVu Sans", "text.color": INK, "axes.labelcolor": MUTED,

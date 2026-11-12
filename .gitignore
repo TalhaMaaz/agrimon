@@ -37,7 +37,7 @@ CLAUDE.local.md
 
 # Machine-specific config
 configs/local.yaml
-docs/machines/*.local.md
+docs/archive/kit-v1/machines/*.local.md
 
 # Obsidian device-specific state (shared settings are committed)
 docs/.obsidian/workspace*.json

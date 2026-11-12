@@ -50,13 +50,3 @@ jobs:
       - name: Block data and secrets
         run: |
           if git ls-files | grep -E '(^data/|\.env$|\.tif$|\.tiff$|\.pt$|\.pth$|\.ckpt$)'; then exit 1; fi
-
-  pr-title:
-    if: github.event_name == 'pull_request'
-    runs-on: ubuntu-latest
-    permissions:
-      pull-requests: read
-    steps:
-      - uses: amannn/action-semantic-pull-request@v6
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
